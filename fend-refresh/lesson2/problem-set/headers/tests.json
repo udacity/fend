@@ -1,0 +1,13 @@
+[{
+  "name": "Headers Quiz",
+  "code": "headandshoulders",
+  "tests": [
+    {
+      "description": "There is an h1 on the page",
+      "definition": {
+        "nodes": "h1",
+        "exists": true
+      }
+    }
+  ]
+}]
