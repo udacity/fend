@@ -1,0 +1,83 @@
+[{
+  "name": "Tree to HTML Quiz",
+  "code": "letsclimbatree",
+  "tests": [
+    {
+      "description": "The body is on the page",
+      "definition": {
+        "nodes": "body",
+        "exists": true
+      }
+    },
+    {
+      "description": "There is one h1",
+      "definition": {
+        "nodes": "h1",
+        "get": "count",
+        "equals": 1
+      }
+    },
+    {
+      "description": "h1 is a child of the body",
+      "definition": {
+        "nodes": "body > h1",
+        "exists": true
+      }
+    },
+    {
+      "description": "The h1 has content",
+      "definition": {
+        "nodes": "body > h1",
+        "get": "innerHTML",
+        "hasSubstring": ".+"
+      }
+    },
+    {
+      "description": "There is one div",
+      "definition": {
+        "nodes": "div",
+        "get": "count",
+        "equals": 1
+      }
+    },
+    {
+      "description": "div is a child of the body",
+      "definition": {
+        "nodes": "body > div",
+        "exists": true
+      }
+    },
+    {
+      "description": "The div has two children",
+      "definition": {
+        "nodes": "div > *",
+        "get": "count",
+        "equals": 2
+      }
+    },
+    {
+      "description": "There are two paragraphs",
+      "definition": {
+        "nodes": "p",
+        "get": "count",
+        "equals": 2
+      }
+    },
+    {
+      "description": "The paragraphs are children of the div",
+      "definition": {
+        "nodes": "div > p",
+        "get": "count",
+        "equals": 2
+      }
+    },
+    {
+      "description": "Paragraphs have content",
+      "definition": {
+        "nodes": "p",
+        "get": "innerHTML",
+        "hasSubstring": ".+"
+      }
+    }
+  ]
+}]
