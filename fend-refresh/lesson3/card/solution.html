@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Slacker Card</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <meta name="udacity-grader" content="http://udacity.github.io/fend/fend-refresh/lesson3/card/tests.json">
+  <meta name="udacity-grader" content="/fend/fend-refresh/lesson3/card/tests.json">
+  <!-- <meta name="udacity-grader" content="http://udacity.github.io/fend/fend-refresh/lesson3/card/tests.json"> -->
   <style>
     * {
       box-sizing: border-box;
@@ -24,6 +25,7 @@
       height: 55%;
       border-radius: 4px 4px 0px 0px;
       border: 1px solid #ddd;
+      background-image: url(profile-placeholder.svg);
       padding: 0px 16px;
     }
     .name {
@@ -64,11 +66,15 @@
       width: 100%;
       height: 32px;
       
+      font-family: 'Open Sans', sans-serif;
       font-size: 1em;
       text-align: left;
 
+      border-radius: 4px;
       border: 0px;
       background-color: white;
+      
+      cursor: pointer;
     }
     .profile-action:hover {
       background-color: #00A5D2;
@@ -80,7 +86,7 @@
   <section>
     <div class="card">
       <div class="top">
-        <h3 class="name">Udacity Stufent <span class="status"></span></h3>
+        <h3 class="name">Udacity Student <span class="status"></span></h3>
         <p class="title">Learner Extraordinaire</p>
       </div>
       <div class="middle">
