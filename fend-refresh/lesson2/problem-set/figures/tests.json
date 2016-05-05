@@ -11,7 +11,7 @@
       }
     },
     {
-      "description": "The image has the right source",
+      "description": "The image has a relative src",
       "definition": {
         "nodes": "img",
         "attribute": "src",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "description": "The image has the right source",
+      "description": "The image has a relative src",
       "definition": {
         "nodes": "img",
         "attribute": "src",
