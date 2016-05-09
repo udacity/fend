@@ -108,7 +108,7 @@
       }
     },
     {
-      "description": "The paragraph attributes the photographer",
+      "description": "The figcaption attributes the photographer",
       "definition": {
         "nodes": "img + figcaption",
         "get": "innerHTML",
