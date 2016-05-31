@@ -4,11 +4,11 @@ A Slack channel usually shows a list of names and their messages. If you click o
 
 ![slack profile card](//lh3.googleusercontent.com/W84T7BiILq5Lo7eZQVh51qy76nJyid64mDDJszqZkmQoWPvqFtrROProduqDW2tpvZ9hKB5oFNbWLvU6MTE=s400)
 
-My actual profile card looks great, but [this one](http://udacity.github.io/fend/fend-refresh/lesson3/card/index.html) does not.
+Cameron's profile card looks great, but [this one](http://udacity.github.io/fend/fend-refresh/lesson3/card/index.html) does not.
 
 For this quiz, you'll be using Developer Tools to make [this website](http://udacity.github.io/fend/fend-refresh/lesson3/card/index.html) look more like a Slack profile card.
 
-*Notes: the buttons at the bottom of the page have the class <code>profile-action</code>".*
+*Notes: the buttons at the bottom of the page have the class <code>profile-action</code>.*
 
 You'll need to do [some](https://css-tricks.com/almanac/) [research](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) for this quiz. There are at **least two new CSS properties** that you'll need to look up.
 
