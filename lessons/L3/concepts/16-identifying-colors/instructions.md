@@ -2,11 +2,11 @@
 
 ### Which CSS declarations can be used to represent the standard color for blue?
 
-- color: #ff0000;
-- color: blue;
-- color: rgb(0, 0, 255);
-- color: #ffff00;
-- color: #00f;
+- `color: #ff0000;`
+- `color: blue;`
+- `color: rgb(0, 0, 255);`
+- `color: #ffff00;`
+- `color: #00f;`
 
 ### References
 
