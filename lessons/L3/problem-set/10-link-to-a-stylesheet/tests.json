@@ -1,0 +1,14 @@
+[{
+  "name" : "Link to a Stylesheet",
+  "code" : "aLINKtotheSTYLEZ",
+  "tests" : [
+    {
+      "description" : "Add link to stylesheet.",
+      "definition" : {
+        "nodes" : "link[rel=\"stylesheet\"]",
+        "attribute" : "href",
+        "equals" : "css/styles.css"
+      }
+    }       
+  ]
+}]

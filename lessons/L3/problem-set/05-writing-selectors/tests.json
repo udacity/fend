@@ -1,0 +1,38 @@
+[{
+  "name" : "Writing Selectors",
+  "code" : "andtheSELECTIONis",
+  "tests" : [
+    {
+      "description" : "Add id selector to style menu.",
+      "definition" : {
+        "nodes" : "#menu",
+        "cssProperty" : "text-align",
+        "equals" : "center"
+      }
+    },
+    {
+      "description" : "Add class selector to style item.",
+      "definition" : {
+        "nodes" : ".item",
+        "cssProperty" : "color",
+        "equals" : "rgb(255, 0, 0)"
+      }
+    },
+    {
+      "description" : "Add class selector to style picture.",
+      "definition" : {
+        "nodes" : ".picture",
+        "cssProperty" : "border-radius",
+        "equals" : "5px"
+      }
+    },
+    {
+      "description" : "Add class selector to style description.",
+      "definition" : {
+        "nodes" : ".description",
+        "cssProperty" : "font-style",
+        "equals" : "italic"
+      }
+    }
+  ]
+}]
