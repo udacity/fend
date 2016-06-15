@@ -8,7 +8,7 @@
 }
 ```
 
-- <div class="right"></div>
-- <a href="#" class="leftright"></a>
-- <button id="right"></button>
-- <p class="highlight module right"></p>
+- `<div class="right"></div>`
+- `<a href="#" class="leftright"></a>`
+- `<button id="right"></button>`
+- `<p class="highlight module right"></p>`
