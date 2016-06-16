@@ -8,18 +8,16 @@ Inside the repo, you'll find the following folders used to organize resources fo
 
 ```
 fend/
-├── lessons/
-│    ├── L0
-│    ├── L1
-│    ├── L2
-│    │    ├── assets
-│    │    ├── concepts
-│    │    ├── keynotes
-│    │    ├── problem-set
-│    └── ...
-└── projects/
-     ├── animal-tradings-cards
-     ├── mockup-to-article
+└── lessons/
+     ├── L0
+     ├── L1
+     ├── L2
+     │    ├── assets
+     │    ├── concepts
+     │    ├── keynotes
+     │    └── problem-set
+     ├── L3
+     ├── L4
      └── ...
 ```
 
