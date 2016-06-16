@@ -28,7 +28,9 @@ fend/
      └── ...
 ```
 
-### Projects
+## Projects
+
+Thw following is a list of current projects required to complete the Front End Nanodegree.
 
 1. [Mockup to Article](https://github.com/udacity/frontend-mockup-to-article)
 2. [Animal Trading Cards](https://github.com/udacity/fend-animal-trading-cards)
@@ -39,7 +41,9 @@ fend/
 7. Neighborhood Map
 8. [Feed Reader Testing](http://github.com/udacity/frontend-nanodegree-feedreader)
 
-### Tools
+## Tools
+
+The following tools are used thoroughout the Front End Nanodegree.
 
 * [Chrome Feedback Extension](http://labs.udacity.com/udacity-feedback-extension/)
 * [JavaScript Grader](https://github.com/udacity/js-grader)
