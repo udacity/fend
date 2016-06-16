@@ -30,7 +30,7 @@ fend/
 
 ## Projects
 
-Thw following is a list of current projects required to complete the Front End Nanodegree.
+The following is a list of current projects required to complete the Front End Nanodegree.
 
 1. [Mockup to Article](https://github.com/udacity/frontend-mockup-to-article)
 2. [Animal Trading Cards](https://github.com/udacity/fend-animal-trading-cards)
