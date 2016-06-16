@@ -15,20 +15,18 @@ For this quiz, I want you to focus exclusively on the selector part of a CSS sta
 ```
 
 ```css
-<style>
-    /* missing id */ {
-        text-align: center;
-    }
-    /* missing class */ {
-        color: red;
-    }
-    /* missing class */ {
-        border-radius: 5px;
-    }
-    /* missing class */ {
-        font-style: italic;
-    }
-</style>
+/* missing id */ {
+  text-align: center;
+}
+/* missing class */ {
+  color: red;
+}
+/* missing class */ {
+  border-radius: 5px;
+}
+/* missing class */ {
+  font-style: italic;
+}
 ```
 
 It's your job to download the webpage and fill-in the missing selectors. If you do it right, your webpage should end up looking like this...
