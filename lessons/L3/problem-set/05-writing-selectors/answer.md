@@ -41,20 +41,18 @@ If you analyze the HTML, you should be able to tell that this webpage is a menu 
 To style this, I added the missing selectors to the CSS.
 
 ```css
-<style>
-  #menu {
-    text-align: center;
-  }
-  .item {
-    color: red;
-  }
-  .picture {
-    border-radius: 5px;
-  }
-  .description {
-    font-style: italic;
-  }
-</style>
+#menu {
+  text-align: center;
+}
+.item {
+  color: red;
+}
+.picture {
+  border-radius: 5px;
+}
+.description {
+  font-style: italic;
+}
 ```
 
 Notice how the first selector uses a `#` sign, but the other three selectors use a `.`

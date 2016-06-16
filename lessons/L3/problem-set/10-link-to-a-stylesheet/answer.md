@@ -30,9 +30,9 @@ To link the **stylesheet**, I added the missing **link** to the `<head>` of the 
 
 ```html
 <head>
-    <!-- ... -->
-    <link href="css/styles.css" rel="stylesheet">
-    <!-- ... -->
+  <!-- ... -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- ... -->
 </head>
 ```
 

@@ -1,6 +1,6 @@
 ### How to Complete this Quiz
 
-1. Download the zip file called `link-to-a-stylesheet.zip` in the downloadables section.
+1. Download the zip file called `link-to-a-stylesheet.zip` from the resources section or from [here](http://udacity.github.io/fend/lessons/L3/problem-set/10-link-to-a-stylesheet/link-to-a-stylesheet.zip).
 2. Edit the `index.html` file by adding a link to the missing `stylesheet`.
 3. View `index.html` in the browser to see if the `stylesheet` was applied.
 4. Turn on the Udacity Feedback Chrome Extension (if you haven't already).
