@@ -19,8 +19,8 @@ fend/
 │    └── ...
 └── projects/
      ├── animal-tradings-cards
-     └── mockup-to-article
-
+     ├── mockup-to-article
+     └── ...
 ```
 
 ### Tools
