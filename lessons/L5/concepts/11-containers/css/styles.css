@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+p {
+	margin: 0;
+}
+
+.container {
+	background-color: #ccf;
+}
+
+.child {
+	background-color: #fcc;
+}

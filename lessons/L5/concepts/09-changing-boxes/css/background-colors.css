@@ -1,0 +1,24 @@
+* {
+	box-sizing: border-box;
+}
+h1 {
+	background-color: #ffc;
+}
+h2 {
+	background-color: #fcf;
+}
+figure {
+	background-color: #ccc;
+}
+figcaption {
+	background-color: #cfc;
+}
+table {
+	background-color: #ccf;
+}
+div {
+	background-color: #fcc;
+}
+q {
+	background-color: #cff;
+}

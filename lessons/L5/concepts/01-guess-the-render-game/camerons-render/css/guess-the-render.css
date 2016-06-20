@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;	
+}
+
+body {
+	font-family: 'Open Sans';
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1em;
+	margin: 0;
+}
+
+h1 { font-size: 64px; }
+h2 { font-size: 48px; }
+h3 { font-size: 32px; }
+h4 { font-size: 28px; }
+
+address {
+	font-style: normal;
+	font-size: 13px;
+	margin-bottom: 2em;
+	color: #555;
+}
+
+article {
+	border: 1px solid #dadada;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px #dadada;
+	background-color: #fff;
+	padding: 20px;
+}
+
+article p:first-child {
+	margin-top: 0;
+}
+
+article p:last-child {
+	margin-bottom: 0;
+}
+
+figure {
+	margin: 0 0 2em 0;
+}
+
+figcaption {
+	font-style: italic;
+}
+
+p {
+	line-height: 2em;
+}
+
+hr {
+	margin: 5em 0;
+}
+
+header {
+	width: 100%;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+nav {
+	height: 60px;
+	width: 100%;
+	margin: 2em 0;
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+	background-color: #fff;
+}
+
+footer {
+	text-align: center;
+	margin: 5em 0;
+}
+
+.menu {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menu > li {
+	float: left;
+	position: relative;
+	display: block;
+	padding: 10px;
+	line-height: 38px;
+}
+
+.menu > li:first-child {
+	padding: 10px 10px 10px 0;
+}
+
+.menu > li > a {
+	text-decoration: none;
+	font-size: 16px;
+	color: rgba(0, 0, 0, .3);
+}
+
+.menu > li > a.selected {
+	font-weight: bold;
+	color: #000;
+}
+
+.title {
+	margin-bottom: 0.5em;
+}
+
+.author {
+	color: #555;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.author:hover {
+	text-decoration: underline;
+}
+
+.city {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.teaser {
+	border: 1px solid #dadada;
+	border-radius: 3px;
+	background-color: #fff;
+	padding: 20px;
+	color: #858585;
+}
+
+.top {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 60%;
+	margin: 3em 0 1em;
+}
+
+.more {
+	text-align: right;
+	margin-top: 1em; 
+}
+
+.more a {
+	color: #02b3e4;
+}

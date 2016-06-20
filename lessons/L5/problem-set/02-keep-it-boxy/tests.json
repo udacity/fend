@@ -1,0 +1,93 @@
+[{
+  "name": "Keep it Boxy",
+  "code": "whatsInTheBOX",
+  "tests": [
+    {
+      "description": "Set the width of Box 1 to 25%",
+      "definition": {
+        "nodes": ".box-1",
+        "cssProperty": "width",
+        "equals": [
+          "125px",
+          "80px"
+        ]
+      }
+    },
+    {
+      "description": "Set the padding of Box 1 to 1em",
+      "definition": {
+        "nodes": ".box-1",
+        "cssProperty": "padding",
+        "equals": "16px"
+      }
+    },
+    {
+      "description": "Set the width of Box 2 to 90%",
+      "definition": {
+        "nodes": ".box-2",
+        "cssProperty": "width",
+        "equals": [
+          "450px",
+          "335px"
+        ]
+      }
+    },
+    {
+      "description": "Set the padding of Box 2 to 3em",
+      "definition": {
+        "nodes": ".box-2",
+        "cssProperty": "padding",
+        "equals": "48px"
+      }
+    },
+    {
+      "description": "Set the width of Box 3 to 80%",
+      "definition": {
+        "nodes": ".box-3",
+        "cssProperty": "width",
+        "equals": [
+          "400px",
+          "186px"
+        ]
+      }
+    },
+    {
+      "description": "Set the padding of Box 3 to 20%",
+      "definition": {
+        "nodes": ".box-3",
+        "cssProperty": "padding",
+        "equals": [
+          "100px",
+          "98px"
+        ]
+      }
+    },
+    {
+      "description": "Set the width of Box 4 to 50%",
+      "definition": {
+        "nodes": ".box-4",
+        "cssProperty": "width",
+        "equals": [
+          "250px",
+          "215px"
+        ]
+      }
+    },
+    {
+      "description": "Set the padding of Box 4 to 10px",
+      "definition": {
+        "nodes": ".box-4",
+        "cssProperty": "padding",
+        "equals": "10px"
+      }
+    },
+    {
+      "description": "Change page's box-sizing to border-box",
+      "definition": {
+        "nodes": "*",
+        "cssProperty": "boxSizing",
+        "equals": "border-box"
+      }
+    }
+  ]
+}]

@@ -1,0 +1,140 @@
+/* Global */
+* {
+	/* you'll want to use this for something... boxy. */
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	background: url(../img/paper.png) repeat-y;
+	width: 980px;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+/* Helpers */
+.clearfix {
+	/* you'll learn more about this later in the positioning lesson */
+	clear: both;
+}
+
+/* Big sections of content */
+.section-content {
+	width: 100%;
+	overflow: hidden;
+}
+
+.section-title {
+	font-size: 32px;
+	line-height: 38px;
+	border-bottom: 1px solid #000;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Font Awesome - http://fontawesome.io/ */
+.fa {
+	color: #ccc;
+	color: rgba(0, 0, 0, 0.3);
+	margin-right: 0.3rem;
+	font-size: 2.3em;
+	vertical-align: middle;
+	width: 28px;
+}
+
+/* Recipe */
+.recipe {
+	padding: 0.75rem;
+	line-height: 25px;
+}
+
+.recipe-summary {
+	width: 50%;
+	float: left;
+}
+
+.recipe-title {
+	font-size: 48px;
+	line-height: 1em;
+	margin-bottom: 1rem;
+}
+
+.recipe-author {
+	margin-top: 1.7em
+}
+
+.recipe-notes {
+	margin: 1.5rem 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.recipe-note {
+	font-size: 0.8rem;
+	margin: 1rem 0.3rem 1rem;
+}
+
+.recipe-image {
+	width: 50%;
+	float: right;
+	padding: 1.25rem;
+}
+
+.recipe-image img {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.recipe-ingredients {
+	overflow: hidden;
+}
+
+.recipe-ingredients li {
+	width: 50%;
+	float: left;
+}
+
+.recipe-directions {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.recipe-directions li {
+	counter-increment: step-counter;
+	margin-bottom: 3rem;
+}
+
+.recipe-directions li span {
+	display: block;
+	margin: -1.6rem 0 0 3.3rem;
+}
+
+.recipe-directions li::before {
+	content: counter(step-counter);
+	font-size: 1.2rem;
+	color: #000;
+	color: rgba(0, 0, 0, 0.5);
+	padding: 7px 13px;
+	border: 1px solid #000;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+}
+
+/* Responsiveness. You'll learn more about this in Responsive Web Design Fundamentals! */
+@media (max-width: 800px) {
+	.recipe,
+	.recipe-image,
+	.recipe-summary {
+		width: 100%;
+	}
+	.recipe-image {
+		float: left;
+		padding: 0;
+	}
+	.recipe-ingredients li {
+		width: 100%;
+	}
+}

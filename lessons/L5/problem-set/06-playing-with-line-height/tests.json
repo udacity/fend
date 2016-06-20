@@ -1,0 +1,30 @@
+[{
+  "name": "Playing with Line-height",
+  "code": "_LiNe-HeIgHt!",
+  "tests": [
+    {
+      "description": "Set the line-height to 22px for class .one",
+      "definition": {
+        "nodes": ".one",
+        "cssProperty": "lineHeight",
+        "equals": "22px"
+      }
+    },
+    {
+      "description": "Double the line-height of class .two",
+      "definition": {
+        "nodes": ".two",
+        "cssProperty": "lineHeight",
+        "equals": "44px"
+      }
+    },
+    {
+      "description": "Change the line-height of class .three to 300%",
+      "definition": {
+        "nodes": ".three",
+        "cssProperty": "lineHeight",
+        "equals": "66px"
+      }
+    }
+  ]
+}]

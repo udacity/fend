@@ -1,0 +1,184 @@
+/*
+Attribution: All images provided by pixabay - https://pixabay.com
+*/
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  background-color: rgba(0,0,0, 0.2);
+  padding: 0 1.5em;
+  position: relative;
+}
+
+.in>div {
+  flex: 1;
+  text-align: center;
+  padding: 2em;
+  line-height: 1.5em;
+}
+
+.in>article {
+  flex: 1;
+  text-align: center;
+  padding: 2em;
+  line-height: 1.5em; 
+}
+
+.in {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first>nav {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.first>nav>a:hover {
+  color: dimgray;
+  text-decoration: underline;
+  transform: translate(0, 5px);
+  transition: all .25s;
+}
+
+.first>nav>a {
+  flex: 1;
+  display: flex;
+  text-align: center;
+  padding: 1em 1em .75em 1em;
+  justify-content: center;
+  align-content: center;
+  transition: all .25s;
+  color: #000;
+  text-decoration: none;
+}
+
+.fancy span {
+  height: 2em;
+  margin-right: 0.5em;
+  background: url('./cup.png') no-repeat right;
+  background-size: contain;
+  flex: 0.4;
+  min-width: 25px;
+}
+
+.fancy {
+  font-family: cursive;
+}
+
+.teabags {
+  background: url('./tea-1.jpg') no-repeat center;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+.batman {
+  position: absolute;
+  width: 100%;
+  text-shadow: 2px 2px 4px black;
+  font-size: 3em;
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+  bottom: 0;
+}
+
+.pick {
+  border: 1px solid gray;
+  order: 1;
+  padding: 1.5em;
+  width: 200px;
+  margin: 0 2em 2em 2em;
+}
+
+.pick>ul>li {
+  list-style-type: none;
+}
+
+.pick>ul>li:before {
+  content: '✓  ';
+  color: green;
+}
+
+.soon {
+  order: 1;
+}
+
+.sel {
+  order: 2;
+}
+
+.store {
+  order: 0;
+}
+
+.exp {
+  text-align: center;
+  font-style: italic;
+  padding: 3em;
+  color: dimgray;
+  line-height: 1.5em;
+  max-width: 45em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.tee {
+  background: url('./tee-4.jpg') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  -webkit-filter: brightness(.25);
+  filter: brightness(.25);
+  position: relative;
+  margin: 0 -1.5em;
+}
+
+.con {
+  color: lightgray;
+  width: 350px;
+  padding: 1.5em;
+  border: 1px solid lightgray;
+  position: absolute;
+  bottom: 100px;
+  left: 75px;
+  z-index: 1;
+  text-align: center;
+  padding: 2em;
+  line-height: 1.5em;
+}
+
+.set {
+  background: url('./tea-2.jpg') no-repeat center;
+  background-size: cover;
+  height: 182px;
+  display: inline-block;
+  order: 0;
+}
+
+.bot {
+  order: 2;
+  background: url('./tea-3.jpg') no-repeat center;
+  background-size: cover;
+  width: 200px;
+  height: 182px;
+  display: inline-block;
+}
+
+.pre {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.pre-s {
+  font-weight: bold;
+  display: inline;
+}

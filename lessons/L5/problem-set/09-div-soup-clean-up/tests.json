@@ -1,0 +1,51 @@
+[{
+  "name": "Div Soup Clean Up",
+  "code": "CALLTHEcleanupCREW",
+  "tests": [
+    {
+      "description": "Replace correct &lt;div&gt; with &lt;header&gt;",
+      "definition": {
+        "nodes": "header.navbar-static-top",
+        "exists": true
+      }
+    },
+    {
+      "description": "Replace correct three &lt;div&gt;s with &lt;section&gt;s (Hint: look for &lt;div&gt;s with class \"container\")",
+      "definition": {
+        "nodes": "section.container",
+        "get": "count",
+        "equals": 3
+      }
+    },
+    {
+      "description": "Replace correct three &lt;div&gt;s with &lt;article&gt;s",
+      "definition": {
+        "nodes": "article.row",
+        "get": "count",
+        "equals": 3
+      }
+    },
+    {
+      "description": "Replace correct &lt;div&gt; with &lt;footer&gt;",
+      "definition": {
+        "nodes": "footer",
+        "get": "innerHTML",
+        "hasSubstring": ".*2016 Company Name.*Privacy Policy.*Terms &amp; Conditions.*"
+      }
+    },
+    {
+      "description": "Replace correct &lt;div&gt; with &lt;h1&gt; (Hint: look for &lt;div&gt; with class \"headline\")",
+      "definition": {
+        "nodes": "h1.headline",
+        "exists": true
+      }
+    },
+    {
+      "description": "Replace correct &lt;a&gt; with &lt;button&gt;",
+      "definition": {
+        "nodes": "button.btn",
+        "exists": true
+      }
+    }
+  ]
+}]

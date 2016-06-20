@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Box Sizing</title>
+	<style>
+		.content {
+			box-sizing: content-box;
+			width: 200px;
+			height: 200px;
+			border: 10px solid blue;
+			padding: 10px;
+			background-color: #ccf;
+		}
+		.box {
+			box-sizing: border-box;
+			width: 200px;
+			height: 200px;			
+			border: 10px solid green;
+			padding: 10px;
+			background-color: #cfc;
+		}
+	</style>
+</head>
+<body>
+	<div class="content"></div>
+	<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+	width: 750px;
+}
+div {
+	font-size: 21px;
+	padding: 1em;
+	margin: 4em 0;
+}
+
+.one {
+  text-align: right;
+  background: #E64777; border: 5px solid #F32C68;
+}
+.two {
+ background: #4560B2; border: 5px solid #4960A3;
+}
+.three {
+ background: #8EE546; border: 5px solid #91CB61;
+}
+.four {
+ background: #FFC74E; border: 5px solid #FFBD2E;
+}
+.five {
+ background: #40BE8E; border: 5px solid #56AB8B;
+}
+
+.one {
+	margin-top: 0.2em;
+}
+.five {
+	overflow: hidden;
+}

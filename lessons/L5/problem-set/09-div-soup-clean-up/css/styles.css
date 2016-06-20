@@ -1,0 +1,89 @@
+html, body {
+    font-size: 16px;
+    line-height: normal;
+}
+
+body {
+    padding-bottom: 40px;
+    color: #5a5a5a;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-nav > li {
+    float: left;
+    font-size: 15px;
+}
+.hero {
+    position: relative;
+    min-width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+    padding: 0;
+}
+.hero-image {
+    background: url("../img/write.jpg");
+    background-size: cover;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    width: 100%;
+    height: 100%;
+}
+.hero-text {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    text-align: center;
+    color: #fff;
+}
+.hero-text .btn {
+    margin-top: 20px;
+}
+.headline, .teaser {
+    text-shadow: 1px 1px 1px #000;
+}
+.headline {
+    font-size: 48px;
+}
+.teaser {
+     font-size: 18px;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.featured-heading {
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin: 1em 0;
+}
+.divider {
+    margin: 80px 0;
+}
+@media (max-width: 991px) {
+    .featured-image {
+        padding: 2em 2em 0 2em;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-bottom: 30px;
+    }
+    .featured-heading, .lead {
+        padding: 0 20px;
+    }
+    .hero-text p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+    }
+}
