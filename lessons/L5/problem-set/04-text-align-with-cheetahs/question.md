@@ -1,4 +1,4 @@
-In this quiz, you'll be [aligning text](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) to make [this site](http://udacity.github.io/fend-box-model-and-semantics/exercises/text-align-with-cheetahs/index.html) look [like this](http://udacity.github.io/fend/lessons/L5/problem-set/04-text-align-with-cheetahs/final.jpg). Notice the changes to the text alignment.
+In this quiz, you'll be [aligning text](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) to make [this site](http://udacity.github.io/fend/lessons/L5/problem-set/04-text-align-with-cheetahs/index.html) look [like this](http://udacity.github.io/fend/lessons/L5/problem-set/04-text-align-with-cheetahs/final.jpg). Notice the changes to the text alignment.
 
 You'll also get to see the [`float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float) in action. I know that doesn't sound incredibly exciting, so I've included a cute image of a baby cheetah in the quiz and some really great information about `text-align` to make up for it!
 

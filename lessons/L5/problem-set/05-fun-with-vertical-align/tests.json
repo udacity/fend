@@ -3,7 +3,7 @@
   "code": "topMIDDLEbottomWHATsup",
   "tests": [
     {
-      "description": "Fix the exponents to complete the Pythagorean Theorem",
+      "description": "Align the exponents to complete the Pythagorean Theorem",
       "definition": {
         "nodes": ".exponent",
         "cssProperty": "verticalAlign",
@@ -11,7 +11,7 @@
       }
     },
     {
-      "description": "Fix the subscripts to balance the chemical equation",
+      "description": "Align the subscripts to balance the chemical equation",
       "definition": {
         "nodes": ".subscript",
         "cssProperty": "verticalAlign",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "description": "Adjust the profile details for James' company profile",
+      "description": "Align the profile details for James' company profile",
       "definition": {
         "nodes": ".profile-details",
         "cssProperty": "verticalAlign",
