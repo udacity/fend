@@ -1,5 +1,3 @@
-If you haven't already, install the Udacity Feedback Chrome Extension. You'll need it for the next quiz.
-
 ### How to Load the Extension
 
 **1. Install the [Udacity Feedback Chrome Extension from the Chrome Web Store](https://chrome.google.com/webstore/detail/udacity-front-end-feedbac/melpgahbngpgnbhhccnopmlmpbmdaeoi) (it's free).**
