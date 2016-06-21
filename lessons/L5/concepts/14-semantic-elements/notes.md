@@ -1,0 +1,3 @@
+Semantic elements can really help improve your website's search engine optimization. If you want to learn more about SEO, I recommend checking out [Moz's Beginners Guide to SEO](https://moz.com/beginners-guide-to-seo).
+
+Want to learn more about surfing the web with a screen reader? Here's a [quick video](https://classroom.udacity.com/courses/ud882/lessons/3574748851/concepts/37757186550923) from our [course on Responsive Images](https://udacity.com/ud882). The video focuses on images but there are some great links if you've never tried a screen reader before.
