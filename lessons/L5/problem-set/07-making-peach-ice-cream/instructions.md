@@ -1,25 +1,11 @@
-I scream, you scream...
+### How to Complete this Quiz
 
-![we all scream for ice cream!](http://udacity.github.io/fend-box-model-and-semantics/img/ice-cream.png)
+1. Download the peach ice cream recipe site from the resources section or from [here](http://udacity.github.io/fend/lessons/L5/problem-set/07-making-peach-ice-cream/making-peach-ice-cream.zip).
+2. Make your site look like the [final site](http://udacity.github.io/fend/lessons/L5/problem-set/07-making-peach-ice-cream/final.jpg). [The annotated version of the final site](http://udacity.github.io/fend/lessons/L5/problem-set/07-making-peach-ice-cream/final-annotated.jpg) is there to help you out.
+2. Edit the site using your favorite text editor. You'll definitely need to add CSS. There are also a few `<div>`s that you might be able to turn into semantic elements. Experiment and see what what happens.
+3. Turn on the [Udacity Feedback Chrome Extension](https://classroom.udacity.com/nanodegrees/nd001/parts/0011345403/modules/742847927175460/lessons/7323812069/concepts/73256617910923).
+4. When all of the tests pass, you'll get a code. Copy and paste the code that appears into the next page to finish!
 
-Time to switch gears! For this quiz, you'll be fixing [a webpage](http://udacity.github.io/fend-box-model-and-semantics/exercises/making-peach-ice-cream/start/index.html) that showcases my mom's homemade peach ice cream recipe. Yum! 🍦 🍨
+<br>
 
-You'll be working in a text editor on your own computer, so you'll need to download a .zip file containing the site's HTML and CSS from the resources section or directly from [this link](http://udacity.github.io/fend-box-model-and-semantics/exercises/making-peach-ice-cream/start-peach-ice-cream.zip). In the .zip file, you'll find [this mockup](http://udacity.github.io/fend-box-model-and-semantics/exercises/making-peach-ice-cream/start/final.jpg) of the final version.
-
-You'll be working in a text editor on your own computer, so you'll need to download a zip file containing the site's HTML and CSS from the resources section or directly from [this link](http://udacity.github.io/fend-box-model-and-semantics/exercises/making-peach-ice-cream/start-peach-ice-cream.zip). In the zip file, you'll find [this mockup](http://udacity.github.io/fend-box-model-and-semantics/exercises/making-peach-ice-cream/start/final.jpg) of the final version.
-
-There are some issues with the webpage. It's using the default `content-box` for `box-sizing` and needs some tweaks done to the spacing between elements. Also, the recipe is enclosed inside a container, but the container is positioned all wrong. You'll need to set the `width` of the container and center it using a special trick with `margin`.
-
-## Centering Boxes
-
-When you set the width of a block element, it keeps the element from taking up the entire width of its container (as long as you set its width to something less than 100%). However, when you do this, the element stays fixed to the left side of the container. What if you want to _center_ it?
-
-![margin auto image](http://udacity.github.io/fend-box-model-and-semantics/img/margin-auto.gif)
-
-_In this animation, the container is the width of the browser and the blue box is being centered inside the container._
-
-If you use the special keyword `auto` on the left and right margins of an element, you can horizontally center the element within its container. The combination of a set width and `margin: 0 auto;` (this is the [shorthand way](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) of writing margin) will make the element take up the width you specify, and then the remaining horizontal space will be split "automatically" between the left and right margins. You see this used on a ton of websites!
-
----
-
-**Note: If you try this recipe, tell us about it! Share pictures in the forums and let us know how it matches up with other ice creams you've had. Sidenote, this recipe is all about the peaches. The better the peaches, the better the ice cream!**
+Good luck!
