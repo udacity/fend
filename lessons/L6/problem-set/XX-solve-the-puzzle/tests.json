@@ -1,0 +1,70 @@
+[{
+  "name": "Solve the Puzzle",
+  "code": "PLACEtheJiggies",
+  "tests": [
+    {
+      "description": "The 6th puzzle piece is absolutely positioned.",
+      "definition": {
+        "nodes": ".piece-6",
+        "cssProperty": "position",
+        "equals": "absolute"
+      }
+    },
+    {
+      "description": "The puzzle is relatively positioned.",
+      "definition": {
+        "nodes": ".puzzle",
+        "cssProperty": "position",
+        "equals": "relative"
+      }
+    },
+    {
+      "description": "The top position of the 4th puzzle piece is correct.",
+      "definition": {
+        "nodes": ".piece-4",
+        "cssProperty": "top",
+        "equals": "0px"
+      }
+    },
+    {
+      "description": "The left position of the 4th puzzle piece is correct.",
+      "definition": {
+        "nodes": ".piece-4",
+        "cssProperty": "left",
+        "equals": "480px" 
+      }
+    }, 
+    {
+      "description": "The top position of the 9th puzzle piece is correct.",
+      "definition": {
+        "nodes": ".piece-9",
+        "cssProperty": "top",
+        "equals": "240px"
+      }
+    },
+    {
+      "description": "The left position of the 9th puzzle piece is correct.",
+      "definition": {
+        "nodes": ".piece-9",
+        "cssProperty": "left",
+        "equals": "0px"
+      }
+    },
+    {
+      "description": "The top position of the 16th puzzle piece is correct.",
+      "definition": {
+        "nodes": ".piece-16",
+        "cssProperty": "top",
+        "equals": "360px"
+      }
+    },
+    {
+      "description": "The left position of the 16th puzzle piece is correct.",
+      "definition": {
+        "nodes": ".piece-16",
+        "cssProperty": "left",
+        "equals": "480px"
+      }
+    }
+  ]
+}]

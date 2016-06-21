@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 50px auto 0;
+	width: 640px;
+	height: 480px;
+    background-image: url(../img/puzzle-quiz_background.png);
+}
+
+.puzzle {
+	position: static; /* test */
+	width: 640px;
+	height: 480px;
+}
+
+.piece {
+	display: block;
+	position: absolute;
+	height: 120px;
+	counter-increment: step-counter;
+}
+
+.piece::after {
+	content: counter(step-counter);
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #000;
+	color: #fff;
+	font-size: 16px;
+	height: 18px;
+	width: 18px;
+	text-align: center;
+}
+
+.piece-1 { left: 0; top: 0; }
+.piece-2 { left: 160px; top: 0; }
+.piece-3 { left: 320px; top: 0; }
+.piece-4 { left: 252px; top: 150px; } /* test */
+.piece-5 { left: 0; top: 120px; }
+.piece-6 { left: 160px; top: 120px; }
+.piece-7 { left: 320px; top: 120px; }
+.piece-8 { left: 480px; top: 120px; }
+.piece-9 { left: -20px; top: 215px; } /* test */
+.piece-10 { left: 160px; top: 240px; }
+.piece-11 { left: 320px; top: 240px; }
+.piece-12 { left: 480px; top: 240px; }
+.piece-13 { left: 0; top: 360px; }
+.piece-14 { left: 160px; top: 360px; }
+.piece-15 { left: 320px; top: 360px; }
+.piece-16 { left: 500px; top: 399px; } /* test */
+
+.piece-6 { position: static; } /* test */
+
+.piece-4, .piece-9, .piece-16 {
+	z-index: 1;
+}
+
+.credit {
+	width: 640px;
+	padding: 0.5em 1em;
+	margin: 0 auto;
+}
