@@ -8,7 +8,7 @@ The `vertical-align` [property](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 _Examples of `vertical-align` with table-cells._
 
-The important thing here is `vertical-align` only works on **inline elements** ((or [inline-block](https://css-tricks.com/almanac/properties/d/display/#inline-block)) and **table-cells**.
+The important thing here is `vertical-align` only works on **inline elements** (or [inline-block](https://css-tricks.com/almanac/properties/d/display/#inline-block)) and **table-cells**.
 
 By default, all inline elements start `baseline` with the baseline of its parent. You can think of the baseline as the imaginary line at the bottom of the "line".
 
