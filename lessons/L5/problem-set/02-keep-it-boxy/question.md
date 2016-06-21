@@ -2,7 +2,7 @@ For your first quiz, let's revisit that troublesome `box-sixing` property. But, 
 
 As a quick reminder, `box-sizing` is the property that determines how to calculate the `height` and `width` of elements. This would seem like a fairly straightforward calculation; however, it starts to get confusing when you add `padding` and `border`. Here's why...
 
-## History of Box Model
+## History of the Box Model
 
 In the mid-to-late 90s, when the first verion of CSS was released, CSS1, the [W3C](https://www.w3.org/) released a spec for how to define the `box-model` using [this diagram](https://www.w3.org/TR/CSS1/#formatting-model).
 

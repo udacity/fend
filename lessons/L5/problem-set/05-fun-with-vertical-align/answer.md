@@ -32,7 +32,7 @@ Hey, who's that? That's just me playing slow-pitch softball 😎 !
 
 ![james playing slow-pitch softball](http://udacity.github.io/fend/lessons/L5/problem-set/05-fun-with-vertical-align/james-answer.png)
 
-To pass this test, you needed to find the `<div>` with the `.profile-details` class and add `vertical-align: top;` . But aren't `<div>`s block elements? Yes, but this `<div>` was displayed as `inline-block` which allowed it to be vertically aligned next to the image.
+To pass this test, you needed to find the `<div>` with the `.profile-details` class and add `vertical-align: top` . But aren't `<div>`s block elements? Yes, but this `<div>` was displayed as `inline-block` which allowed it to be vertically aligned next to the image.
 
 ### Pangram with Images
 

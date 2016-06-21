@@ -11,7 +11,7 @@
       }
     },
     {
-      "description": "Double the line-height of class .two",
+      "description": "Increase the line-height of class .two by a factor of 2",
       "definition": {
         "nodes": ".two",
         "cssProperty": "lineHeight",
