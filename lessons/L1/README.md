@@ -1,1 +1,1 @@
-# Assets for Establishing a Web Developer Mindset
+# Assets for Nanodegree Orientation

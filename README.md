@@ -6,6 +6,7 @@ General Front End Nanodegree Content Resources
 
 * [Repo](#repo)
 * [Projects](#projects)
+* [Lessons](#lessons)
 * [Tools](#tools)
 * [Creators](#creators)
 
@@ -41,9 +42,20 @@ The following is a list of current projects required to complete the Front End N
 7. Neighborhood Map
 8. [Feed Reader Testing](http://github.com/udacity/frontend-nanodegree-feedreader)
 
+## Lessons
+
+The following is a list of the lessons associated with the Front End Nanodegree.
+
+* L0 - Establishing a Web Developer Mindset
+* L1 - Nanodegree Orientation
+* L2 - HTML Syntax
+* L3 - CSS Syntax
+* L4 - How to Write Code Faster
+* L5 - Box Model and Semantic Elements
+
 ## Tools
 
-The following tools are used thoroughout the Front End Nanodegree.
+The following is a list of tools used thoroughout the Front End Nanodegree.
 
 * [Chrome Feedback Extension](http://labs.udacity.com/udacity-feedback-extension/)
 * [JavaScript Grader](https://github.com/udacity/js-grader)

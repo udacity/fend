@@ -1,0 +1,1 @@
+# Assets for Establishing a Web Developer Mindset
