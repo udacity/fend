@@ -24,19 +24,16 @@
 
 		if(checkBorderBox() === true && box1.css("padding") === "0px") {
 			if(box1.width() >= box1ValidWidths.borderBoxNoPaddingLowerWidth && box1.width() <= box1ValidWidths.borderBoxNoPaddingUpperWidth) {
-				console.log("here 1");
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
 		} else if(checkBorderBox() === true && box1.css("padding") !== "0px") {
 			if(box1.width() >= box1ValidWidths.borderBoxWithPaddingLowerWidth && box1.width() <= box1ValidWidths.borderBoxWithPaddingUpperWidth) {
-				console.log("here 2");
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
 		} else {
-			if(Math.floor(box1.width()) === box1ValidWidths.contentBoxWidth) {
-				console.log("here 3");
+			if(box1.width() === box1ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
@@ -45,7 +42,39 @@
 		return _isCorrect;
   	};
 
+	var test2 = function() {
+		var _isCorrect = false;
+		var box2 = $(".box-2");
+		var box2ValidWidths = {
+			contentBoxWidth: "450",
+			borderBoxNoPaddingLowerWidth: "431",
+			borderBoxNoPaddingUpperWidth: "433",
+			borderBoxWithPaddingLowerWidth: "335",
+			borderBoxWithPaddingUpperWidth: "337"
+		}
+
+		if(checkBorderBox() === true && box2.css("padding") === "0px") {
+			if(box2.width() >= box2ValidWidths.borderBoxNoPaddingLowerWidth && box2.width() <= box2ValidWidths.borderBoxNoPaddingUpperWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
+			}
+		} else if(checkBorderBox() === true && box2.css("padding") !== "0px") {
+			if(box2.width() >= box2ValidWidths.borderBoxWithPaddingLowerWidth && box2.width() <= box2ValidWidths.borderBoxWithPaddingUpperWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
+			}
+		} else {
+			if(box2.width() === box2ValidWidths.contentBoxWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
+			}
+		}
+
+		return _isCorrect;
+  	};
+
 	tests.push(test1);
+	tests.push(test2);
 
 	var isCorrect = false;
 
