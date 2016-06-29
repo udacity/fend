@@ -31,7 +31,7 @@ var box4ValidWidths = {
 
 function checkWidth(box, widths, test) {
 	console.log(box);
-	console.log(width);
+	console.log(widths);
 	console.log(test);
 	if(checkBorderBox() === true) {
 		for(var i = 0; i < widths.borderBoxWidth.length; i++) {
