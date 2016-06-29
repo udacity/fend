@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
 	checkWidth(box1, box1ValidWidths, "custom-event-1");
-	checkWidth(box2, box2ValidWidths, "custom-event-2");
+	/*checkWidth(box2, box2ValidWidths, "custom-event-2");
 	checkWidth(box3, box3ValidWidths, "custom-event-3");
-	checkWidth(box4, box4ValidWidths, "custom-event-4");
+	checkWidth(box4, box4ValidWidths, "custom-event-4");*/
 
 });
 
@@ -13,38 +13,45 @@ var box3 = $(".box-3");
 var box4 = $(".box-4");
 
 var box1ValidWidths = {
-	contentBoxWidth: "125px",
-	borderBoxLowerWidth: "122px",
-	borderBoxUpperWidth: "123px"
+	contentBoxWidth: "125",
+	borderBoxNoPaddingLowerWidth: "112px",
+	borderBoxNoPaddingUpperWidth: "114px",
+	borderBoxWithPaddingLowerWidth: "80px",
+	borderBoxWithPaddingUpperWidth: "82px"
 }
-var box2ValidWidths = {
-	contentBoxWidth: "450px",
+/*var box2ValidWidths = {
+	contentBoxWidth: "450",
 	borderBoxLowerWidth: "441px",
 	borderBoxUpperWidth: "442px"
 }
 var box3ValidWidths = {
-	contentBoxWidth: "400px",
+	contentBoxWidth: "400",
 	borderBoxLowerWidth: "392px",
 	borderBoxUpperWidth: "393px"
 }
 var box4ValidWidths = {
-	contentBoxWidth: "250px",
+	contentBoxWidth: "250",
 	borderBoxLowerWidth: "245px",
 	borderBoxUpperWidth: "246px"
-}
+}*/
 
 function checkWidth(box, widths, test) {
 	console.log(box);
 	console.log(widths);
 	console.log(test);
-	if(checkBorderBox() === true) {
-		if(box.css("width") >= widths.borderBoxLowerWidth && box.css("width") <= widths.borderBoxUpperWidth) {
-			console.log("here");
+	if(checkBorderBox() === true && box.css("padding") === "0px") {
+		if(box.width() >= widths.borderBoxNoPaddingLowerWidth && box.width() <= widths.borderBoxNoPaddingUpperWidth) {
+			console.log("here 1");
+			window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
+		}
+	} else if(checkBorderBox() === true && box.css("padding") !== "0px") {
+		if(box.width() >= widths.borderBoxWithPaddingLowerWidth && box.width() <= widths.borderBoxWithPaddingUpperWidth) {
+			console.log("here 2");
 			window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
 		}
 	} else {
-		if(Math.floor(box.css("width")) === widths.contentBoxWidth) {
-			console.log("here too!");
+		if(Math.floor(box.width()) === widths.contentBoxWidth) {
+			console.log("here 3");
 			window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
 		}
 	}
