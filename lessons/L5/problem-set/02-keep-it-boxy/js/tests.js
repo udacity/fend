@@ -32,7 +32,7 @@
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
-		} else {
+		} else if(checkBorderBox() === false) {
 			if(box1.width() === box1ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
@@ -63,7 +63,7 @@
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
 			}
-		} else {
+		} else if(checkBorderBox() === false) {
 			if(box2.width() === box2ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
