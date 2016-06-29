@@ -39,6 +39,7 @@ function checkWidth(box, widths, test) {
 	console.log(box);
 	console.log(widths);
 	console.log(test);
+	console.log(box.css("padding"));
 	if(checkBorderBox() === true && box.css("padding") === "0px") {
 		if(box.width() >= widths.borderBoxNoPaddingLowerWidth && box.width() <= widths.borderBoxNoPaddingUpperWidth) {
 			console.log("here 1");
