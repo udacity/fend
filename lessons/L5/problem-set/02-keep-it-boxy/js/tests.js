@@ -15,11 +15,11 @@
 		var _isCorrect = false;
 		var box1 = $(".box-1");
 		var box1ValidWidths = {
-			contentBoxWidth: "125",
-			borderBoxNoPaddingLowerWidth: "112",
-			borderBoxNoPaddingUpperWidth: "114",
-			borderBoxWithPaddingLowerWidth: "80",
-			borderBoxWithPaddingUpperWidth: "82"
+			contentBoxWidth: 125,
+			borderBoxNoPaddingLowerWidth: 112,
+			borderBoxNoPaddingUpperWidth: 114,
+			borderBoxWithPaddingLowerWidth: 80,
+			borderBoxWithPaddingUpperWidth: 82
 		}
 
 		if(checkBorderBox() === true && box1.css("padding") === "0px") {
@@ -32,7 +32,7 @@
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
-		} else if(checkBorderBox() === false) {
+		} else {
 			if(box1.width() === box1ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
@@ -46,11 +46,11 @@
 		var _isCorrect = false;
 		var box2 = $(".box-2");
 		var box2ValidWidths = {
-			contentBoxWidth: "450",
-			borderBoxNoPaddingLowerWidth: "431",
-			borderBoxNoPaddingUpperWidth: "433",
-			borderBoxWithPaddingLowerWidth: "335",
-			borderBoxWithPaddingUpperWidth: "337"
+			contentBoxWidth: 450,
+			borderBoxNoPaddingLowerWidth: 431,
+			borderBoxNoPaddingUpperWidth: 433,
+			borderBoxWithPaddingLowerWidth: 335,
+			borderBoxWithPaddingUpperWidth: 337
 		}
 
 		if(checkBorderBox() === true && box2.css("padding") === "0px") {
