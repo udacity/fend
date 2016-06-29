@@ -14,10 +14,10 @@ var box4 = $(".box-4");
 
 var box1ValidWidths = {
 	contentBoxWidth: "125",
-	borderBoxNoPaddingLowerWidth: "112px",
-	borderBoxNoPaddingUpperWidth: "114px",
-	borderBoxWithPaddingLowerWidth: "80px",
-	borderBoxWithPaddingUpperWidth: "82px"
+	borderBoxNoPaddingLowerWidth: "112",
+	borderBoxNoPaddingUpperWidth: "114",
+	borderBoxWithPaddingLowerWidth: "80",
+	borderBoxWithPaddingUpperWidth: "82"
 }
 /*var box2ValidWidths = {
 	contentBoxWidth: "450",
