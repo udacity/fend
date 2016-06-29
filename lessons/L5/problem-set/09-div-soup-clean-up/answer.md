@@ -43,7 +43,7 @@ For brevity, I used ellipses (`...`) to denote the areas of the solution that di
       <footer>
         <!-- ... -->
       </footer>
-    </div>
+    </section>
   </body>
 </html>
 ```
