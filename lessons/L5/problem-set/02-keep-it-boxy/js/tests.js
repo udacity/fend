@@ -73,8 +73,72 @@
 		return _isCorrect;
   	};
 
+	var test3 = function() {
+		var _isCorrect = false;
+		var box3 = $(".box-3");
+		var box3ValidWidths = {
+			contentBoxWidth: 400,
+			borderBoxNoPaddingLowerWidth: 382,
+			borderBoxNoPaddingUpperWidth: 384,
+			borderBoxWithPaddingLowerWidth: 186,
+			borderBoxWithPaddingUpperWidth: 188
+		}
+
+		if(checkBorderBox() === true && box3.css("padding") === "0px") {
+			if(box3.width() >= box3ValidWidths.borderBoxNoPaddingLowerWidth && box3.width() <= box3ValidWidths.borderBoxNoPaddingUpperWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-3', {'detail': 'passed'}));
+			}
+		} else if(checkBorderBox() === true && box3.css("padding") !== "0px") {
+			if(box3.width() >= box3ValidWidths.borderBoxWithPaddingLowerWidth && box3.width() <= box3ValidWidths.borderBoxWithPaddingUpperWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-3', {'detail': 'passed'}));
+			}
+		} else if(checkBorderBox() === false) {
+			if(box3.width() === box3ValidWidths.contentBoxWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-3', {'detail': 'passed'}));
+			}
+		}
+
+		return _isCorrect;
+  	};
+
+	var test4 = function() {
+		var _isCorrect = false;
+		var box4 = $(".box-4");
+		var box4ValidWidths = {
+			contentBoxWidth: 250,
+			borderBoxNoPaddingLowerWidth: 235,
+			borderBoxNoPaddingUpperWidth: 237,
+			borderBoxWithPaddingLowerWidth: 215,
+			borderBoxWithPaddingUpperWidth: 217
+		}
+
+		if(checkBorderBox() === true && box4.css("padding") === "0px") {
+			if(box4.width() >= box4ValidWidths.borderBoxNoPaddingLowerWidth && box4.width() <= box4ValidWidths.borderBoxNoPaddingUpperWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-4', {'detail': 'passed'}));
+			}
+		} else if(checkBorderBox() === true && box4.css("padding") !== "0px") {
+			if(box4.width() >= box4ValidWidths.borderBoxWithPaddingLowerWidth && box4.width() <= box4ValidWidths.borderBoxWithPaddingUpperWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-4', {'detail': 'passed'}));
+			}
+		} else if(checkBorderBox() === false) {
+			if(box4.width() === box4ValidWidths.contentBoxWidth) {
+				_isCorrect = true;
+				window.dispatchEvent(new CustomEvent('custom-event-4', {'detail': 'passed'}));
+			}
+		}
+
+		return _isCorrect;
+  	};
+
 	tests.push(test1);
 	tests.push(test2);
+	tests.push(test3);
+	tests.push(test4);
 
 	var isCorrect = false;
 
