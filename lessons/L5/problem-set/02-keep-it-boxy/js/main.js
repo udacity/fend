@@ -30,14 +30,19 @@ var box4ValidWidths = {
 }
 
 function checkWidth(box, widths, test) {
+	console.log(box);
+	console.log(width);
+	console.log(test);
 	if(checkBorderBox() === true) {
 		for(var i = 0; i < widths.borderBoxWidth.length; i++) {
 			if(box.css("width") === widths.borderBoxWidth[i]) {
+				console.log("here");
 				window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
 			}
 		}
 	} else {
 		if(box.css("width") === widths.contentBoxWidth) {
+			console.log("here too!");
 			window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
 		}
 	}
