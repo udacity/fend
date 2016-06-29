@@ -14,19 +14,23 @@ var box4 = $(".box-4");
 
 var box1ValidWidths = {
 	contentBoxWidth: "125px",
-	borderBoxWidth: ["123px", "124px"]
+	borderBoxLowerWidth: "122px",
+	borderBoxUpperWidth: "123px"
 }
 var box2ValidWidths = {
 	contentBoxWidth: "450px",
-	borderBoxWidth: ["441px", "442px"]
+	borderBoxLowerWidth: "441px",
+	borderBoxUpperWidth: "442px"
 }
 var box3ValidWidths = {
 	contentBoxWidth: "400px",
-	borderBoxWidth: ["392px", "393px"]
+	borderBoxLowerWidth: "392px",
+	borderBoxUpperWidth: "393px"
 }
 var box4ValidWidths = {
 	contentBoxWidth: "250px",
-	borderBoxWidth: ["245px", "246px"]
+	borderBoxLowerWidth: "245px",
+	borderBoxUpperWidth: "246px"
 }
 
 function checkWidth(box, widths, test) {
@@ -34,14 +38,12 @@ function checkWidth(box, widths, test) {
 	console.log(widths);
 	console.log(test);
 	if(checkBorderBox() === true) {
-		for(var i = 0; i < widths.borderBoxWidth.length; i++) {
-			if(box.css("width") === widths.borderBoxWidth[i]) {
-				console.log("here");
-				window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
-			}
+		if(box.css("width") >= widths.borderBoxLowerWidth && box.css("width") <= widths.borderBoxUpperWidth) {
+			console.log("here");
+			window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
 		}
 	} else {
-		if(box.css("width") === widths.contentBoxWidth) {
+		if(Math.floor(box.css("width")) === widths.contentBoxWidth) {
 			console.log("here too!");
 			window.dispatchEvent(new CustomEvent(test, {'detail': 'passed'}));
 		}
