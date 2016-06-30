@@ -43,7 +43,7 @@
       }
     },
     {
-      "description": "The receipe's author is inside an italicized inline element",
+      "description": "The receipe's author is inside an emphasized inline element",
       "definition": {
         "nodes": "em",
         "get": "innerHTML",
