@@ -137,11 +137,9 @@
 
   	var test5 = function() {
 		var _isCorrect = false;
-		var box4Padding = parseInt($(".box-4").css("padding"));
-		console.log(box4Padding);
+		var box4Padding = parseInt($(".box-3").css("padding"));
 
 		if(box4Padding >= 98 && box4Padding <= 100) {
-			console.log("here");
 			_isCorrect = true;
 			window.dispatchEvent(new CustomEvent('custom-event-5', {'detail': 'passed'}));
 		}
