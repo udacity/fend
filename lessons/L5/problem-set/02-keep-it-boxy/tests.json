@@ -5,12 +5,8 @@
     {
       "description": "Set the width of Box 1 to 25%",
       "definition": {
-        "nodes": ".box-1",
-        "cssProperty": "width",
-        "equals": [
-          "125px",
-          "80px"
-        ]
+        "waitForEvent": "custom-event-1",
+        "exists": true
       }
     },
     {
@@ -24,12 +20,8 @@
     {
       "description": "Set the width of Box 2 to 90%",
       "definition": {
-        "nodes": ".box-2",
-        "cssProperty": "width",
-        "equals": [
-          "450px",
-          "335px"
-        ]
+        "waitForEvent": "custom-event-2",
+        "exists": true
       }
     },
     {
@@ -43,34 +35,22 @@
     {
       "description": "Set the width of Box 3 to 80%",
       "definition": {
-        "nodes": ".box-3",
-        "cssProperty": "width",
-        "equals": [
-          "400px",
-          "186px"
-        ]
+        "waitForEvent": "custom-event-3",
+        "exists": true
       }
     },
     {
       "description": "Set the padding of Box 3 to 20%",
       "definition": {
-        "nodes": ".box-3",
-        "cssProperty": "padding",
-        "equals": [
-          "100px",
-          "98px"
-        ]
+        "waitForEvent": "custom-event-5",
+        "exists": true
       }
     },
     {
       "description": "Set the width of Box 4 to 50%",
       "definition": {
-        "nodes": ".box-4",
-        "cssProperty": "width",
-        "equals": [
-          "250px",
-          "215px"
-        ]
+        "waitForEvent": "custom-event-4",
+        "exists": true
       }
     },
     {
