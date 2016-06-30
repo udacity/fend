@@ -42,12 +42,8 @@
     {
       "description": "Set the padding of Box 3 to 20%",
       "definition": {
-        "nodes": ".box-3",
-        "cssProperty": "padding",
-        "equals": [
-          "100px",
-          "98px"
-        ]
+        "waitForEvent": "custom-event-5",
+        "exists": true
       }
     },
     {

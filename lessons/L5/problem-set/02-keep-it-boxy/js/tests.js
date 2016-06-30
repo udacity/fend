@@ -33,7 +33,7 @@
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
 		} else {
-			if(box1.width() === box1ValidWidths.contentBoxWidth) {
+			if(Math.round(box1.width()) === box1ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-1', {'detail': 'passed'}));
 			}
@@ -64,7 +64,7 @@
 				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
 			}
 		} else if(checkBorderBox() === false) {
-			if(box2.width() === box2ValidWidths.contentBoxWidth) {
+			if(Math.round(box2.width()) === box2ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-2', {'detail': 'passed'}));
 			}
@@ -95,7 +95,7 @@
 				window.dispatchEvent(new CustomEvent('custom-event-3', {'detail': 'passed'}));
 			}
 		} else if(checkBorderBox() === false) {
-			if(box3.width() === box3ValidWidths.contentBoxWidth) {
+			if(Math.round(box3.width()) === box3ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-3', {'detail': 'passed'}));
 			}
@@ -126,10 +126,22 @@
 				window.dispatchEvent(new CustomEvent('custom-event-4', {'detail': 'passed'}));
 			}
 		} else if(checkBorderBox() === false) {
-			if(box4.width() === box4ValidWidths.contentBoxWidth) {
+			if(Math.round(box4.width()) === box4ValidWidths.contentBoxWidth) {
 				_isCorrect = true;
 				window.dispatchEvent(new CustomEvent('custom-event-4', {'detail': 'passed'}));
 			}
+		}
+
+		return _isCorrect;
+  	};
+
+  	var test5 = function() {
+		var _isCorrect = false;
+		var box4Padding = parseInt($(".box-4").css("padding"));
+
+		if(box4Padding >= 98 && box4Padding <= 100) {
+			_isCorrect = true;
+			window.dispatchEvent(new CustomEvent('custom-event-5', {'detail': 'passed'}));
 		}
 
 		return _isCorrect;
@@ -139,6 +151,7 @@
 	tests.push(test2);
 	tests.push(test3);
 	tests.push(test4);
+	tests.push(test5);
 
 	var isCorrect = false;
 
