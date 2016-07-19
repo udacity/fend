@@ -34,6 +34,6 @@ It would make sense for this CSS to display Box 3 as taking up 80% of the `width
 
 ### The Final Answer
 
-If you made it far enough to complete the quiz, then you will have swapped out `content-box` with the preffered `border-box` and seen the following result. Isn't it an incredible difference! This is much better way of handling `box-sizing` as it really communicates what is desrcibed in the CSS.
+If you made it far enough to complete the quiz, then you will have swapped out `content-box` with the preferred `border-box` and seen the following result. Isn't it an incredible difference! This is much better way of handling `box-sizing` as it really communicates what is desrcibed in the CSS.
 
 ![finish image](http://udacity.github.io/fend/lessons/L5/problem-set/02-keep-it-boxy/boxy-3.png)
