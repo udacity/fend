@@ -12,7 +12,7 @@ Here's my solution:
     <h2 class="title underline">Chores</h2>
     <ul class="list">
       <li>load the diswasher</li>
-      <li>vucuum living room</li>
+      <li>vacuum living room</li>
       <li>take out garbage</li>
       <li class="finished">sweep the garage</li>
     </ul>
