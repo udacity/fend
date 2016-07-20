@@ -53,9 +53,8 @@
     {
       "description": "The img in .five has the correct left padding",
       "definition": {
-        "nodes": ".floated-image",
-        "cssProperty": "paddingLeft",
-        "equals": "21px"
+        "waitForEvent": "custom-event-1",
+        "exists": true
       }
     }
   ]
