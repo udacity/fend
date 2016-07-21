@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anonymous Boxes</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    div:nth-child(even) {
+      background-color: #fcf;
+    }
+    div:nth-child(odd) {
+      background-color: #cfc;
+    }
+    .test {
+      height: 400px;
+    }
+    .inline {
+      display: inline-block;
+    }
+    div.inline {
+      
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>This is text<span> and so is this</span></p>
+  </div>
+  <div>
+  sup 
+    <span class="test inline">hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi </span>
+    <span>yo </span>
+    <span>that</span>
+  </div>
+  <div class="inline">text</div>
+  <div class="inline">text</div>
+</body>
+</html>

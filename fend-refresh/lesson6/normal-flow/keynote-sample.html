@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Normal Flow</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+    }
+    body {
+      /*padding-left: calc(25% - 8px);*/
+    }
+    div:nth-child(even) {
+      background-color: #ecc81a;
+    }
+    div:nth-child(odd) {
+      background-color: #02b3e4;
+    }
+    span:nth-child(even) {
+      background-color: #f95c3c;
+    }
+    span:nth-child(odd) {
+      background-color: #02ccba;
+    }
+    div {
+      height: 50px;
+      margin-bottom: 8px;
+    }
+    .first {
+      width: 100px;
+    }
+    .second {
+      width: 150px;
+    }
+    .third {
+      width: 50px;
+    }
+    span, div {
+      border: 4px solid #2e3d49;
+    }
+  </style>
+</head>
+<body>
+  <div class="first">block</div>
+  <div class="second">block</div>
+  <div class="third">block</div>
+  <span>span </span>
+  <span>span </span>
+  <span>span</span>
+  <div class="fourth">block</div>
+</body>
+</html>
