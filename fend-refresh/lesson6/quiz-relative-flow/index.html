@@ -19,21 +19,31 @@
       background-color: #DFDFD1;
     }
     .relative {
+      /*position: relative;*/
+      /*top: 500px;*/
+      vertical-align: top;
     }
-    .child {
+    .sibling {
       display: inline-block;
       background-color: #15C26B;
       border: 2px solid #2e3d49;
       width: 150px;
-      height: 50px;
+      height: 100px;
+    }
+    .child {
+      background-color: #ffae0c;
+      border: 2px solid #2e3d49;
     }
   </style>
 </head>
 <body>
   <div class="block-container">Parent<br>
-    <div class="child">Sibling</div>
-    <div class="child relative">Relative</div>
-    <div class="child">Sibling</div>
+    <div class="sibling">Sibling</div>
+    <div class="sibling relative">Relative
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+    </div>
+    <div class="sibling">Sibling</div>
   </div>
   <span class="inline-container">
     Sibling to the parent
