@@ -2,11 +2,11 @@
 
 ### How to Complete this Quiz
 
-1. Edit `index.html` in the Udacity classroom to replicate the same styling seen in the solution image.
+Edit `index.html` in the Udacity classroom to replicate the same styling seen in the solution image.
 
 ![kitten solution](http://udacity.github.io/fend/lessons/L3/problem-set/02-style-an-image/kitten-solution-instructions.jpg)
 
-2. I've already written the **selector** portion of the code, you just need to fill in the styles.
+- I've already written the **selector** portion of the code, you just need to fill in the styles.
 
 ```css
 .kitten-image {
