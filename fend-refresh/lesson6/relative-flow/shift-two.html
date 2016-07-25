@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative Flow Example</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+    }
+    div {
+      display: inline-block;
+      border: 2px solid #2e3d49;
+      width: 300px;
+      height: 50px;
+    }
+    div:nth-child(even) {
+      background-color: #02b3e4;
+    }
+    div:nth-child(odd) {
+      background-color: #ecc81a;
+    }
+    .shift {
+      /*position: relative;*/
+      top: 10px;
+      left: 10px;
+    }
+    .relative {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div>I'm an inline-block div!</div>
+  <div class="shift">I'm an inline-block div!</div>
+</body>
+</html>

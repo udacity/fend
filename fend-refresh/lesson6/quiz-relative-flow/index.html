@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative Flow Quiz</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .block-container {
+      background-color: #dbe2e8;
+      padding: 8px;
+    }
+    .inline-container {
+      background-color: #DFDFD1;
+    }
+    .relative {
+      /*position: relative;*/
+      /*top: 500px;*/
+      vertical-align: top;
+    }
+    .sibling {
+      display: inline-block;
+      background-color: #15C26B;
+      border: 2px solid #2e3d49;
+      width: 150px;
+      height: 100px;
+    }
+    .child {
+      background-color: #ffae0c;
+      border: 2px solid #2e3d49;
+    }
+  </style>
+</head>
+<body>
+  <div class="block-container">Parent<br>
+    <div class="sibling">Sibling</div>
+    <div class="sibling relative">Relative
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+    </div>
+    <div class="sibling">Sibling</div>
+  </div>
+  <span class="inline-container">
+    Sibling to the parent
+  </span>
+</body>
+</html>
