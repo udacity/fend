@@ -51,7 +51,7 @@
       }
     },
     {
-      "description": "Recipe notes are displayed in a line",
+      "description": "The three recipe notes are displayed in a single line",
       "definition": {
         "nodes": ".recipe-note",
         "cssProperty": "display",
