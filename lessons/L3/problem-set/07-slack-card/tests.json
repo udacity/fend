@@ -35,7 +35,7 @@
       }
     },
     {
-      "description": "The typo in the card name is fixed",
+      "description": "The typo (mistake) in the card name is fixed",
       "definition": {
         "nodes": ".name",
         "get": "innerHTML",
