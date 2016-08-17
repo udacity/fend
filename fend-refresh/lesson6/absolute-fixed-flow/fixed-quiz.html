@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Footer Quiz</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <meta name="udacity-grader" content="fixed-tests.json">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    div {
+      width: 200px;
+      height: 100px;
+    }
+    .sticky-footer {
+      background-color: #15C26B;
+      width: 100%;
+      height: 50px;
+    }
+    div:nth-child(even) {
+      background-color: #ecc81a;
+    }
+    div:nth-child(odd) {
+      background-color: #02b3e4;
+    }
+  </style>
+</head>
+<body>
+  <div class="bordered">Random</div>
+  <footer class="sticky-footer">Footer! Company info, etc. Normally, this would be at the end of the HTML. I'm putting it here so it's visible at first render.</footer>
+  <div class="bordered">divs</div>
+  <div class="bordered">to</div>
+  <div class="bordered">make</div>
+  <div class="bordered">the</div>
+  <div class="bordered">document</div>
+  <div class="bordered">tall</div>
+  <div class="bordered">enough</div>
+  <div class="bordered">to</div>
+  <div class="bordered">be</div>
+  <div class="bordered">scrollable.</div>
+  <div class="bordered">You can do it!</div>
+</body>
+</html>

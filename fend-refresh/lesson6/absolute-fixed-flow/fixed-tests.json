@@ -1,0 +1,22 @@
+[{
+  "name": "Fixed Position",
+  "code": "glueisalsosticky",
+  "tests": [
+    {
+      "description": "Footer has fixed position",
+      "definition": {
+        "nodes": ".sticky-footer",
+        "cssProperty": "position",
+        "equals": "fixed"
+      }
+    },
+    {
+      "description": "One property is used to make the footer sticky",
+      "definition": {
+        "nodes": ".sticky-footer",
+        "cssProperty": "bottom",
+        "equals": "0px"
+      }
+    }
+  ]
+}]
