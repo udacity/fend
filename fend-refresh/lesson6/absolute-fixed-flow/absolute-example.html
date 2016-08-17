@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Absolute Example</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+    }
+    div {
+      display: inline-block;
+      border: 2px solid #2e3d49;
+      width: 200px;
+      height: 100px;
+    }
+    div:nth-child(even) {
+      background-color: #ecc81a;
+    }
+    div:nth-child(odd) {
+      background-color: #02b3e4;
+    }
+    .absolute {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div class="absolute">Absolute
+    <div class="absolute">Absolute child of absolute</div>
+  </div>
+  <div></div>
+</body>
+</html>
