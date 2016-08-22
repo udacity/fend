@@ -14,17 +14,17 @@
     .bordered {
       border: 2px solid #2e3d49;
     }
-    .block-container {
+    .parent {
+      height: 100%;
       background-color: #dbe2e8;
       padding: 8px;
     }
-    .inline-container {
+    .light-olive {
       background-color: #DFDFD1;
     }
     .relative {
       position: relative;
       top: 50px;
-      /*vertical-align: top;*/
     }
     .sibling {
       display: inline-block;
@@ -38,15 +38,15 @@
   </style>
 </head>
 <body>
-  <div class="block-container">Parent<br>
+  <div class="parent">Parent<br>
     <div class="sibling bordered">Sibling</div>
-    <div class="sibling relative bordered">Relative
+    <div class="sibling relative bordered">Relative Sibling
       <div class="child bordered">Child</div>
       <div class="child bordered">Child</div>
     </div>
     <div class="sibling bordered">Sibling</div>
   </div>
-  <span class="inline-container">
+  <span class="light-olive">
     Sibling to the parent
   </span>
 </body>
