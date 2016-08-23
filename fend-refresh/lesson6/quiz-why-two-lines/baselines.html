@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Baselines</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    span {
+      display: inline-block; /* so I can set a width */
+      width: 10em;
+      vertical-align: top;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent bordered">
+    <span>This is text.</span>
+    <span>This is more text.</span>
+    <span>This is text that extends a few lines down so that you can see that its baseline is lower.</span>
+  </div>
+</body>
+</html>
