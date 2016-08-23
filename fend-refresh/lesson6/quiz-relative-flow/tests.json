@@ -1,0 +1,12 @@
+[{
+  "name": "Debugging CSS",
+  "code": "movin-on-up",
+  "tests": [{
+    "description": "The non-relative siblings have moved up",
+    "definition": {
+      "nodes": ".sibling:not(.relative)",
+      "cssProperty": "verticalAlign",
+      "equals": ["top", "text-top"]
+    }
+  }]
+}]
