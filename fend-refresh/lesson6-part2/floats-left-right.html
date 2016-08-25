@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Floats Left and Right</title>
+  <style>
+    @font-face {
+      font-family: 'Menlo Regular';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Menlo Regular'), url('fonts/Menlo-Regular.woff');
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'Menlo Regular', monospace;
+      font-weight: bold;
+    }
+    div {
+      font-size: 44pt;
+      border: 6px solid #2e3d49;
+      width: 5em;
+      text-align: center;
+    }
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+    .green {
+      background-color: #89D698;
+    }
+    .blue {
+      background-color: #89D0E5;
+    }
+  </style>
+</head>
+<body>
+  <div class="left 1 green">.left.1</div>
+  <div class="right 2 blue">.right.2</div>
+  <div class="left 3 green">.left.3</div>
+  <div class="right 4 blue">.right.4</div>
+</body>
+</html>
