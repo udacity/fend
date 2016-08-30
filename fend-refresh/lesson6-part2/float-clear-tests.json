@@ -1,0 +1,17 @@
+[{
+  "name": "Float Clearing",
+  "code": "clearlycoolchapsclearcode",
+  "tests": [
+    {
+      "description": ".sibling is below the child floats",
+      "definition": {
+        "nodes": ".sibling",
+        "cssProperty": "clear",
+        "equals": [
+          "left",
+          "both"
+        ]
+      }
+    }
+  ]
+}]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clearfix Example</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    .clearfix:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+    .parent {
+      background-color: #89D0E5;
+    }
+    .child {
+      background-color: #15A222;
+    }
+    .sibling {
+      background-color: #D16906;
+    }
+    .left {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="bordered parent clearfix">
+    <div class="bordered child left">Child</div>
+    <div class="bordered child left">Child</div>
+  </div>
+  <div class="bordered sibling">Sibling to the parent</div>
+</body>
+</html>

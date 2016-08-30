@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clearfix Overflow Quiz</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    .row {
+      overflow: auto;
+      background-color: #89D0E5;
+      /*width: 100%;*/
+      /*height: 100%;*/
+    }
+    .left {
+      float: left;
+    }
+    .child {
+      width: 10em;
+      height: 50px;
+      margin: 8px;
+      padding: 8px;
+    }
+    .child:nth-child(even) {
+      background-color: #15A222;
+    }
+    .child:nth-child(odd) {
+      background-color: #D16906;
+    }
+  </style>
+</head>
+<body>
+  <div class="row bordered clearfix">
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+    <div class="left bordered child">This floats left.</div>
+  </div>
+</body>
+</html>

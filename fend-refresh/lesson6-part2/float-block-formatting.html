@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Block Formatting Context</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .child {
+      background-color: #15A222;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    .block-context {
+      overflow: auto;
+      background-color: #D16906;
+    }
+    .left {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child left">Child</div>
+    <div class="child left">Child</div>
+    <div class="bordered block-context">New context</div>
+  </div>
+</body>
+</html>

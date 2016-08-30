@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Block Formatting Context</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    div:nth-child(even):not(.left):not(.right) {
+      background-color: #128FC2;
+    }
+    div:nth-child(odd):not(.left):not(.right) {
+      background-color: #15A222;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    .left {
+      float: left;
+      background-color: #FD9F0E;
+    }
+    .right {
+      float: right;
+      background-color: #FD9F0E;
+    }
+    .clear-left {
+      clear: left;
+    }
+    .clear-right {
+      clear: right;
+    }
+    .clear-both {
+      clear: both;
+    }
+    .wide {
+      width: 40%;
+    }
+  </style>
+</head>
+<body>
+  <!-- example 1 -->
+  <div class="bordered left">Left ← Left ← Left</div>
+  <div class="bordered clear-left">This element has been clear left'ed.</div>
+
+  <!-- example 2 -->
+  <div class="bordered right">Right → Right → Right</div>
+  <div class="bordered clear-right">This element has been clear right'ed.</div>
+
+  <!-- example 3 -->
+  <div class="left bordered">Left ← Left ← Left</div>
+  <div class="bordered">Not cleared at all!</div>
+
+  <!-- example 4 -->
+  <div class="bordered left wide">Left ← Left ← Left ← Really wide.</div>
+  <div class="bordered right wide">Right → Right → Right. Really wide.</div>
+  <div class="bordered clear-both">This element has been clear both'ed.</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudoelements Example</title>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      font-size: 14pt;
+    }
+    .bordered {
+      border: 2px solid #2e3d49;
+    }
+    .child {
+      background-color: #15A222;
+    }
+    .child:after {
+      content: 'Pseudo-element!';
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">Parent
+    <div class="child bordered">Child</div>
+  </div>
+</body>
+</html>
