@@ -1,6 +1,9 @@
 * {
 	box-sizing: content-box;
 }
+html {
+	font-size: 16px;
+}
 .container {
 	width: 500px;
 	border: 5px solid #2E3D49;
