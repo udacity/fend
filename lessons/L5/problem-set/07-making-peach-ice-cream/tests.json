@@ -55,7 +55,10 @@
       "definition": {
         "nodes": ".recipe-note",
         "cssProperty": "display",
-        "equals": "inline"
+        "equals": [
+          "inline",
+          "inline-block"
+        ]
       }
     }
   ]
