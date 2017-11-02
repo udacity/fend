@@ -1,4 +1,4 @@
-## Pixel Art Maker Project: Lab Tests
+## Animal Cards Project: Lab Tests
 
 ### Setup
 
@@ -14,7 +14,7 @@ Then you can run the tests by starting up cypress.io either with its GUI or head
 
 When the GUI opens, click `Run All Tests`. Cmd-Q to quit.
 
-There's only one test file, `cypress/integration/pixel_spec.js`. Look in that file to see how the tests were constructed.
+There's only one test file, `cypress/integration/home_page_spec.js`. Look in that file to see how the tests were constructed.
 
 ### Local Usage Headless
 
