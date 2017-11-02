@@ -15,7 +15,7 @@ describe('The Home Page', function() {
       expect($ul).to.have.css('list-style-type','none')
     });
     cy.get('ul > li > span').should(($labels) => {
-      expect($labels).to.have.css('font-weight','bold')
+      expect($labels).to.have.css('font-weight','700')
     });
     cy.get('body > div, body > div > div').should(($borders) => {
       expect($borders).to.have.css('border','1px solid rgb(0, 0, 0)')
