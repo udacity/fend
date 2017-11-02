@@ -1,0 +1,38 @@
+body {
+  font-family:Arial;
+}
+
+h3 {
+  font-size:24px;
+}
+
+.fact {
+  font-style: italic;
+}
+
+
+ul {
+  list-style-type:none;
+  padding:10px 0 10px 0;
+}
+
+li span {
+  font-weight: bold;
+}
+
+.inner, .outer {
+  border:1px solid black;
+}
+
+.outer {
+  width:300px;
+  padding:10px;
+}
+
+.inner {
+  margin:20px 0;
+}
+
+.inner p,ul {
+  margin:10px;
+}

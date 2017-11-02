@@ -1,0 +1,8 @@
+{
+  "name": "pixel-art",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "cypress": "^1.0.2"
+  }
+}
