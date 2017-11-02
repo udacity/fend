@@ -14,8 +14,17 @@ describe('The Home Page', function() {
     cy.get('ul').should(($ul) => {
       expect($ul).to.have.css('list-style-type','none')
     });
+    // Check whether list item intros are bold
     cy.get('ul > li > span').should(($labels) => {
-      expect($labels).to.have.css('font-weight','700')
+      const fw = $labels.css('font-weight')
+      expect(fw).to.be.oneOf(['700', 'bold'])
+    })
+    // This test will also work to check whether list item intros are bold.
+    cy.get('ul > li > span').should(($labels) => {
+      expect($labels).to.satisfy(() => {
+        const fw = $labels.css('font-weight')
+        return fw === '700' || fw === 'bold'
+        });
     });
     cy.get('body > div, body > div > div').should(($borders) => {
       expect($borders).to.have.css('border','1px solid rgb(0, 0, 0)')
