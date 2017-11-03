@@ -22,36 +22,52 @@ describe('Pixel Art', function() {
     cy.get('h1').contains('Lab: Pixel Art Maker');
     // Check that there's correct user instructions
     cy.get('h2').contains('Set Grid Size');
-    // Check that the inputs are there and the produce a grid when you hit submit
-    const checkWidth = parseInt(Math.random() * 13 + 2);
-    const checkHeight = parseInt(Math.random() * 13 + 2);
-    cy.get('form').get('#input_height').clear().type(checkWidth);
-    cy.get('form').get('#input_width').clear().type(checkHeight);
-    cy.get('form').get('input:submit').click();
-    // check that the grid is the size we'd expect
-    cy.get('#pixel_canvas').get('tr').should('have.length', checkWidth);
-    cy.get('#pixel_canvas').get('td').should('have.length', checkWidth * checkHeight);
 
-    // check that we can click on the first and second cell and get the right results
-    cy.get('#colorPicker').click();
+    // Set the color picker. Note that since this is laggy, to avoid races we do this early.
     let colorVal, colorValStr;
+    const randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
     cy.get('#colorPicker').should(($cp) => {
-      expect($cp).to.have.value('#000000');
-      colorVal = hexToRgb($cp.val());
-      colorValStr = 'rgb(' + colorVal.r + ', ' + colorVal.g + ', ' + colorVal.b + ')';
+      $cp.val(randomColor);
     });
 
-    cy.get('#pixel_canvas').get('#cell-0-0').click();
-    cy.get('#pixel_canvas').get('#cell-0-0').should(($cell1) => {
-      expect($cell1).to.have.css('background-color',colorValStr);
-    });
-    const fWidth = checkWidth - 1;
-    const fHeight = checkHeight - 1;
-    const farthest = '#cell-' + fWidth + '-' + fHeight;
-    cy.get('#pixel_canvas').get(farthest).click();
-    cy.get('#pixel_canvas').get(farthest).should(($cell1) => {
-      expect($cell1).to.have.css('background-color',colorValStr);
-    });
+    // Check that the inputs are there and the produce a clickable grid when you hit submit.
+    // Originally used random width and height but this is not a reliable way to grade.
+    // The right way is to check a range of edge cases, see arrays below.
+    const widths =  [1, 2, 5,  3, 13, 1, 7];
+    const heights = [1, 2, 6, 14,  2, 12, 1];
+    let checkWidth;
+    let checkHeight;
+    for (let i in widths) {
+      checkWidth = widths[i];
+      checkHeight = heights[i];
+      cy.get('form').get('#input_height').clear().type(checkHeight);
+      cy.get('form').get('#input_width').clear().type(checkWidth);
+      cy.get('form').get('input:submit').click();
+      // check that the grid is the size we'd expect
+      cy.get('#pixel_canvas > tr').should('have.length', checkHeight);
+      cy.get('#pixel_canvas > tr > td').should('have.length', checkWidth * checkHeight);
+
+      // check that we can click on the color picker, then the first and second cell and get the right results
+      cy.get('#colorPicker').should(($cp) => {
+        expect($cp).to.have.value(randomColor);
+        colorVal = hexToRgb($cp.val());
+        colorValStr = 'rgb(' + colorVal.r + ', ' + colorVal.g + ', ' + colorVal.b + ')';
+      });
+
+      // This needs to click the first and last td according to the right grid width and height.
+      const firstPixel = cy.get('#pixel_canvas > tr:eq(0) td:eq(0)');
+      firstPixel.click();
+      firstPixel.should(($cell1) => {
+        expect($cell1).to.have.css('background-color',colorValStr);
+      });
+      const fWidth = checkWidth - 1;
+      const fHeight = checkHeight - 1;
+      const lastPixel = cy.get('#pixel_canvas > tr:eq(' + fHeight + ') > td:eq(' + fWidth + ')');
+      lastPixel.click();
+      lastPixel.should(($cell1) => {
+        expect($cell1).to.have.css('background-color',colorValStr);
+      });
+    }
 
   })
 })
