@@ -15,7 +15,7 @@
       "definition": {
         "nodes": "header",
         "cssProperty": "fontWeight",
-        "equals": "normal"
+        "equals": "400"
       }
     },
     {
