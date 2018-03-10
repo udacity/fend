@@ -1,0 +1,66 @@
+[{
+  "name": "Headers Quiz",
+  "code": "headandshoulders",
+  "tests": [
+    {
+      "description": "There is an h1 on the page",
+      "definition": {
+        "nodes": "h1",
+        "exists": true
+      }
+    },
+    {
+      "description": "The h1 has content",
+      "definition": {
+        "nodes": "h1",
+        "get": "innerHTML",
+        "hasSubstring": ".+"
+      }
+    },
+    {
+      "description": "There is an h2 on the page",
+      "definition": {
+        "nodes": "h2",
+        "exists": true
+      }
+    },
+    {
+      "description": "The h2 has content",
+      "definition": {
+        "nodes": "h2",
+        "get": "innerHTML",
+        "hasSubstring": ".+"
+      }
+    },
+    {
+      "description": "There is an h3 on the page",
+      "definition": {
+        "nodes": "h3",
+        "exists": true
+      }
+    },
+    {
+      "description": "The h3 has content",
+      "definition": {
+        "nodes": "h3",
+        "get": "innerHTML",
+        "hasSubstring": ".+"
+      }
+    },
+    {
+      "description": "There is an h4 on the page",
+      "definition": {
+        "nodes": "h4",
+        "exists": true
+      }
+    },
+    {
+      "description": "The h4 has content",
+      "definition": {
+        "nodes": "h4",
+        "get": "innerHTML",
+        "hasSubstring": ".+"
+      }
+    }
+  ]
+}]
