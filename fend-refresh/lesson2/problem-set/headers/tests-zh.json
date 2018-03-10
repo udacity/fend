@@ -3,14 +3,14 @@
   "code": "headandshoulders",
   "tests": [
     {
-      "description": "There is an h1 on the page",
+      "description": "页面上有一个h1",
       "definition": {
         "nodes": "h1",
         "exists": true
       }
     },
     {
-      "description": "The h1 has content",
+      "description": "h1包含内容",
       "definition": {
         "nodes": "h1",
         "get": "innerHTML",
@@ -18,14 +18,14 @@
       }
     },
     {
-      "description": "There is an h2 on the page",
+      "description": "页面上有一个h2",
       "definition": {
         "nodes": "h2",
         "exists": true
       }
     },
     {
-      "description": "The h2 has content",
+      "description": "h2包含内容",
       "definition": {
         "nodes": "h2",
         "get": "innerHTML",
@@ -33,14 +33,14 @@
       }
     },
     {
-      "description": "There is an h3 on the page",
+      "description": "页面上有一个h3",
       "definition": {
         "nodes": "h3",
         "exists": true
       }
     },
     {
-      "description": "The h3 has content",
+      "description": "h3包含内容",
       "definition": {
         "nodes": "h3",
         "get": "innerHTML",
@@ -48,14 +48,14 @@
       }
     },
     {
-      "description": "There is an h4 on the page",
+      "description": "页面上有一个h4",
       "definition": {
         "nodes": "h4",
         "exists": true
       }
     },
     {
-      "description": "The h4 has content",
+      "description": "h4包含内容",
       "definition": {
         "nodes": "h4",
         "get": "innerHTML",
