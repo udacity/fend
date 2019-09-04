@@ -17,7 +17,7 @@ Note that projects that do not include associated starter code are not linked he
 1. Personal Blog Website
 2. [Landing Page](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
 3. [Weather Journal App](https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
-4. Evaluate A News Article with Natural Language Processing
+4. [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
 5. Capstone - Travel App
 
 ## Courses
