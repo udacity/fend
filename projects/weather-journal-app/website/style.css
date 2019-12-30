@@ -16,9 +16,23 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
-
+.container{
+    display:flex;
+    flex-wrap: wrap;
 }
+
+.form-entry{
+    width: 50%;
+}
+
+.results{
+    width: 50%;
+}
+
+.log-area{
+    width: 50%;
+}
+
 
 .entry{
     background: rgba(59, 74, 107, .4);
