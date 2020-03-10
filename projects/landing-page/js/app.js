@@ -56,20 +56,14 @@ function buildNav() {
 
 // Add class 'active' to section when near top of viewport
 function makeActive() {
-    const activeSection = document.querySelector('.your-active-class');
-    // first 'if' in case active class has already been removed
-    if (activeSection != null) {
-        const activeLocation = activeSection.getBoundingClientRect();
-        if (activeLocation.bottom < (window.innerHeight / 2)) {
-            activeSection.classList.remove('your-active-class');
-        }
-    }
     for (let i=0; i<sections.length; i++) {
         let sect = document.querySelector(`#section${i+1}`);
         const sectionLoc = sect.getBoundingClientRect();
         if ((sectionLoc.top < (window.innerHeight / 2))
             && (sectionLoc.bottom > (window.innerHeight / 2))) {
             sect.classList.add('your-active-class');
+        } else {
+            sect.classList.remove('your-active-class');
         }
     }
 }
@@ -78,9 +72,11 @@ function makeActive() {
 function scrollTO(evt) {
     const targetId = evt.target.dataset.target;
     const targetSection = document.querySelector(`#${targetId}`);
-    targetSection.scrollIntoView({
-        behavior: 'smooth'
-    });
+    if (targetSection != null) {
+        targetSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 }    
 
 function goToTop() {
@@ -98,9 +94,7 @@ function goToTop() {
 buildNav();
 
 // Scroll to section on link click
-navList.addEventListener('click', event => {
-    scrollTO(event);
-});
+navList.addEventListener('click', event => scrollTO(event));
 
 // Set sections as active
 window.addEventListener('scroll', makeActive);
