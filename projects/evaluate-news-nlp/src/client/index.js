@@ -1,7 +1,5 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
-import { getInfo } from './js/getAPI'
-import { printHashtags } from './js/modifySite'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -9,7 +7,15 @@ import './styles/form.scss'
 import './styles/footer.scss'
 import './styles/header.scss'
 
+/* API SDK
+var textapi = new aylien({
+application_id: process.env.API_ID,
+application_key: process.env.API_KEY
 
+Endpoint - 
+https://api.aylien.com/api/v1
+});
+*/
 
 console.log(checkForName);
 
@@ -21,7 +27,5 @@ console.log("CHANGE!!");
 
 export {
     checkForName,
-    handleSubmit,
-    getInfo,
-    printHashtags
+    handleSubmit
 }
