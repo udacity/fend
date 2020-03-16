@@ -3,11 +3,16 @@ dotenv.config()
 
 var path = require('path')
 const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const mockAPIResponse = require('./mockAPI.js')
 var aylien = require("aylien_textapi")
 
-
 const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(cors())
 
 app.use(express.static('dist'))
 

@@ -2,8 +2,28 @@
 function getInfo(input) {
     const baseURL = 'https://api.aylien.com/api/v1/hashtags?language=en&input='
     console.log(input)
-    const request = baseURL + input
+    const request = ``
     console.log(request)
+
+    const APIget = async () => {
+        const receive = await fetch(request, {
+            method: 'GET',
+            headers: {
+                'X-AYLIEN-TextAPI-Application-Key': process.env.API_ID,
+                'X-AYLIEN-TextAPI-Application-ID': process.env.API_ID,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        try {
+            const dataString = await receive.json()
+            return dataString
+        } catch(error) {
+            console.log('error', error)
+        }
+    }
+        
+/*
     var aylien = require("aylien_textapi")
     var textapi = new aylien({
         application_id: process.env.API_ID,
@@ -16,6 +36,7 @@ function getInfo(input) {
             console.log(response)
         }
     })
+    */
     console.log(test)
 }
 
