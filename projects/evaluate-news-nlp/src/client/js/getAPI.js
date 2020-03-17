@@ -2,7 +2,7 @@
 function getInfo(input) {
     const baseURL = 'https://api.aylien.com/api/v1/hashtags?language=en&input='
     console.log(input)
-    const request = baseURL + input
+    const request = ``
     console.log(request)
 /*
     const getting = async (url = '', data = {}) => {
@@ -40,6 +40,7 @@ function getInfo(input) {
             console.log(response)
         }
     })
+    */
     console.log(test)
     */
 }
