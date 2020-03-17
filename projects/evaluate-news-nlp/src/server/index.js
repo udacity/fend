@@ -6,6 +6,10 @@ const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 var aylien = require("aylien_textapi")
 
+var textapi = new aylien({
+    application_id: process.env.API_ID,
+    application_key: process.env.API_KEY
+    });
 
 const app = express()
 
@@ -19,10 +23,27 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(3001, function () {
-    console.log('Example app listening on port 3001!')
+app.listen(8001, function () {
+    console.log('Example app listening on port 8001!')
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+app.get('/api', function (req, res) {
+    textapi.hashtags({
+        url: req
+        }, function(error, response) {
+            if (error === null) {
+                console.log(response.hashtags);
+                res.send(response.hashtags)
+            }
+    });
 })
+
+/*
+textapi.hashtags({
+    url: 'http://www.bbc.com/sport/0/football/25912393'
+    }, function(error, response) {
+        if (error === null) {
+          console.log(response.hashtags);
+        }
+});
+*/

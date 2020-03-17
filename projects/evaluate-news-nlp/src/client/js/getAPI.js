@@ -4,7 +4,7 @@ function getInfo(input) {
     console.log(input)
     const request = baseURL + input
     console.log(request)
-
+/*
     const getting = async (url = '', data = {}) => {
         console.log('in getting')
         const receive = await fetch(request, {

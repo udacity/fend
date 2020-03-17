@@ -3,15 +3,17 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
 
-    console.log("::: Form Submitted :::")
+    const getData = async () => {
+        const res = await fetch(`http://localhost:3001/api?input=${formText}`);
+    }
+//    try 
+
 /*    fetch('http://localhost:3001/test')
     .then(res => res.json())
     .then(function(data) {
         document.getElementById('results').innerHTML = data.message
     }) */
-    document.getElementById('results').innerHTML = 'Yo'
 
 }
 
