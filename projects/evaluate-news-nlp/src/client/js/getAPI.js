@@ -40,7 +40,7 @@ function getInfo(input) {
             console.log(response)
         }
     })
-    */
+    
     console.log(test)
     */
 }
