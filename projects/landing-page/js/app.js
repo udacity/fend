@@ -1,36 +1,10 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
+let activeSection = null;
 
-/**
- * Define Global Variables
- * 
-*/
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
 
 function addSectionIdToNavBar (section) {
-    // navBar.section.attributes.id;
     let navBar = document.querySelector('#navbar__list');  // I hate that this is in the outermost level
     let newlistElem = document.createElement('li');
     newlistElem.textContent = section.querySelector('h2').textContent;
-    console.log("scrolling into view.");
 
     newlistElem.addEventListener('click', function () {
         section.scrollIntoView({behavior: "smooth"});
@@ -39,35 +13,28 @@ function addSectionIdToNavBar (section) {
     navBar.appendChild(newlistElem);
 }
 
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-function buildNavigation () {
-    let sections = document.querySelectorAll('section');
-    sections.forEach(addSectionIdToNavBar);
+function addMouseOverEvent (section) {
+    // Seeing if the mouse is over lets us know that this is the section being viewed.
+    section.addEventListener('mouseover', function () {
+        if (section !== activeSection && activeSection !== null) {
+            activeSection.classList.toggle("your-active-class");
+            activeSection = section;
+        } else if (activeSection === null) {
+            activeSection = section;
+        }
+        if (section.className !== "your-active-class") {
+            // This is to avoid toggling the active class if it is already set.
+            section.classList.toggle("your-active-class");
+        }
+    })
 }
 
-// Add class 'active' to section when near top of viewport
+function buildNavigation () {
+    console.warn("build navigation run!");
+    console.log("build navigation run!");
+    let sections = document.querySelectorAll('section');
+    sections.forEach(addSectionIdToNavBar);
+    sections.forEach(addMouseOverEvent);
+}
 
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-
+document.addEventListener('DOMContentLoaded', buildNavigation);
