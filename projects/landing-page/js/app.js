@@ -25,7 +25,16 @@
  * 
 */
 
-
+function addSectionIdToNavBar (section) {
+    // navBar.section.attributes.id;
+    let navBar = document.querySelector('#navbar__list');  // I hate that this is in the outermost level
+    let newlistElem = document.createElement('li');
+    let newATagElem = document.createElement('a');
+    newATagElem.setAttribute('href', '#' + section.attributes.id.value);
+    newATagElem.text = section.querySelector('h2').textContent;
+    newlistElem.appendChild(newATagElem);
+    navBar.appendChild(newlistElem);
+}
 
 /**
  * End Helper Functions
@@ -35,6 +44,10 @@
 
 // build the nav
 
+function buildNavigation () {
+    let sections = document.querySelectorAll('section');
+    sections.forEach(addSectionIdToNavBar);
+}
 
 // Add class 'active' to section when near top of viewport
 

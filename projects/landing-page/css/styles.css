@@ -19,7 +19,7 @@ body {
 }
 
 
-/* Typeography General*/
+/* Typography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
@@ -43,6 +43,10 @@ h2 {
 p {
     line-height: 1.6em;
     color: #eee;
+}
+
+li {
+    color: black;  /* This doesnt work? */
 }
 
 /* ---- Layout Rules ---- */

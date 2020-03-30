@@ -8,6 +8,9 @@
   <!-- Load Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
   <link href="css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="js/app.js">
+    document.addEventListener('DOMContentLoaded', buildNavigation);
+  </script>
 </head>
 <body>
   <!-- HTML Follows BEM naming conventions 
@@ -15,7 +18,9 @@
   <header class="page__header">
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
+      <ul id="navbar__list">
+        <!-- This nav stuff will be where the javascript puts the nav shit -->
+      </ul>
     </nav>
   </header>
   <main>
@@ -54,6 +59,5 @@
   <footer class="page__footer">
     <p>&copy Udacity</p>
   </footer>
-  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
