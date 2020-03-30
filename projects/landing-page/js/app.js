@@ -29,10 +29,13 @@ function addSectionIdToNavBar (section) {
     // navBar.section.attributes.id;
     let navBar = document.querySelector('#navbar__list');  // I hate that this is in the outermost level
     let newlistElem = document.createElement('li');
-    let newATagElem = document.createElement('a');
-    newATagElem.setAttribute('href', '#' + section.attributes.id.value);
-    newATagElem.text = section.querySelector('h2').textContent;
-    newlistElem.appendChild(newATagElem);
+    newlistElem.textContent = section.querySelector('h2').textContent;
+    console.log("scrolling into view.");
+
+    newlistElem.addEventListener('click', function () {
+        section.scrollIntoView({behavior: "smooth"});
+    });
+
     navBar.appendChild(newlistElem);
 }
 
