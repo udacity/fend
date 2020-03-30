@@ -2,7 +2,7 @@ let activeSection = null;
 
 
 function addSectionIdToNavBar (section) {
-    let navBar = document.querySelector('#navbar__list');  // I hate that this is in the outermost level
+    let navBar = document.querySelector('#navbar__list');
     let newlistElem = document.createElement('li');
     newlistElem.textContent = section.querySelector('h2').textContent;
 
@@ -30,8 +30,6 @@ function addMouseOverEvent (section) {
 }
 
 function buildNavigation () {
-    console.warn("build navigation run!");
-    console.log("build navigation run!");
     let sections = document.querySelectorAll('section');
     sections.forEach(addSectionIdToNavBar);
     sections.forEach(addMouseOverEvent);
