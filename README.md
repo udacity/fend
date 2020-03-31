@@ -1,74 +1,37 @@
 # Front End Nanodegree Program
 
-General Front End Nanodegree Content Resources
+Front End Nanodegree Content & Project Resources
 
 ## Table of Contents
 
-* [Repo](#repo)
 * [Projects](#projects)
-* [Lessons](#lessons)
-* [Tools](#tools)
-* [Creators](#creators)
-
-## Repo
-
-Inside the repo you'll find the following folders used to organize resources for FEND. Each lesson folder is composed of **assets**, **concepts**, **keynotes**, and an optional **problem set**.
-
-```
-fend/
-└── lessons/
-     ├── L0
-     ├── L1
-     ├── L2
-     │    ├── assets
-     │    ├── concepts
-     │    ├── keynotes
-     │    └── problem-set
-     ├── L3
-     ├── L4
-     └── ...
-```
+* [Courses](#courses)
+* [Style-Guide](#style-guide)
 
 ## Projects
 
 The following is a list of current projects required to complete the Front End Nanodegree.
 
-1. [Mockup to Article](https://github.com/udacity/frontend-mockup-to-article)
-2. [Animal Trading Cards](https://github.com/udacity/fend-animal-trading-cards)
-3. Build a Portfolio Site
-4. [Online Resume](https://github.com/udacity/frontend-nanodegree-resume)
-5. [Classic Arcade Game Clone](https://github.com/udacity/frontend-nanodegree-arcade-game)
-6. [Website Optimization](https://github.com/udacity/frontend-nanodegree-mobile-portfolio)
-7. Neighborhood Map
-8. [Feed Reader Testing](http://github.com/udacity/frontend-nanodegree-feedreader)
+Note that projects that do not include associated starter code are not linked here.
 
-## Lessons
+1. Personal Blog Website
+2. [Landing Page](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
+3. [Weather Journal App](https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
+4. [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
+5. Capstone - Travel App
 
-The following is a list of the lessons associated with the Front End Nanodegree.
+## Courses
 
-* L0 - Establishing a Web Developer Mindset
-* L1 - Nanodegree Orientation
-* L2 - HTML Syntax
-* L3 - CSS Syntax
-* L4 - How to Write Code Faster
-* L5 - Box Model and Semantic Elements
+The following is a list of the courses associated with the Front End Nanodegree.
 
-## Tools
+* C1 - CSS, Website Layout, Website Components
+* C2 - JavaScript & The DOM
+* C3 - Web API's and Asynchronous Applications
+* C4 - Build Tools and Single Page Web Apps
+* C5 - Capstone
 
-The following is a list of tools used thoroughout the Front End Nanodegree.
+## Style-Guide
 
-* [Chrome Feedback Extension](http://labs.udacity.com/udacity-feedback-extension/)
-* [JavaScript Grader](https://github.com/udacity/js-grader)
+See below for the Udacity Style Guide used thoroughout the Front End Nanodegree.
+
 * [Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/)
-
-## Creators
-
-**Cameron Pittman**
-
-* <https://twitter.com/cwpittman>
-* <https://github.com/cameronwp>
-
-**James Parkes**
-
-* <https://twitter.com/parkesrjames>
-* <https://github.com/jamesparkes>
