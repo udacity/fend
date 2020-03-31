@@ -1,5 +1,5 @@
-import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { sdkGet } from '../server/sdkAPI'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -10,6 +10,6 @@ import './styles/header.scss'
 alert("I EXIST")
 
 export {
-    checkForName,
-    handleSubmit
+    handleSubmit,
+    sdkGet
 }

@@ -1,20 +1,25 @@
+import sdkGet from {sdkAPI}
+
 function handleSubmit(event) {
     event.preventDefault()
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
+    let formText = document.getElementById('url').value
+
+    const hashtags = sdkGet(formText)
 
     const getData = async () => {
-        const res = await fetch(`http://localhost:3001/api?input=${formText}`);
+        const res = await sdkGet(formText)
+        try {
+            const data = await hashtags.json()
+            return data
+        } catch (error) {
+            console.log("error", error)
+        }
+        return res
     }
-//    try 
 
-/*    fetch('http://localhost:3001/test')
-    .then(res => res.json())
-    .then(function(data) {
-        document.getElementById('results').innerHTML = data.message
-    }) */
-
+    getData(data)
+    
 }
 
 export { handleSubmit }
