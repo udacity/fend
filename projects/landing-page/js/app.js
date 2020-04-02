@@ -34,7 +34,17 @@
 */
 
 // build the nav
-
+const navbar = document.createDocumentFragment();
+for(let i = 0; i < 4; i++){
+    const list_item = document.createElement('li');
+    const list_link = document.createElement('a');
+    list_link.href = `#section${i+1}`;
+    list_link.innerHTML = `Section ${i+1}`;
+    list_link.style.color = '#fff';
+    list_item.appendChild(list_link);
+    navbar.appendChild(list_item);
+}
+document.querySelector('#navbar__list').appendChild(navbar);
 
 // Add class 'active' to section when near top of viewport
 

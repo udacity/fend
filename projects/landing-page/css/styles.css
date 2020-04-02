@@ -65,14 +65,23 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
 }
 
-.navbar__menu li {
+.navbar__menu li{
     display: inline-block;
+    padding : 10px;
 }
+
+.navbar__menu a{
+    display: inline-block;
+    color : #fff;
+    /* font-family: 'Merriweather'; */
+}
+
 
 .navbar__menu .menu__link {
     display: block;
@@ -90,7 +99,7 @@ section {
 
 /* Header Styles */
 .page__header {
-    background: #fff;
+    background: #333;
     position: fixed;
     top: 0;
     width: 100%;
