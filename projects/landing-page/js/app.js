@@ -17,7 +17,7 @@
  * Define Global Variables
  * 
 */
-const ACTIVE_TOP_COORD_PERCENT = 0.1;
+const ACTIVE_TOP_COORD_PERCENT = 0.2;
 
 
 /**
@@ -55,8 +55,8 @@ function add_mousewheel_listener_to_sections(){
     const section = document.querySelector('section');
     section.parentElement.addEventListener('mousewheel',add_active_class);
     window.addEventListener('scroll',add_active_class);
-
 }
+
 function add_active_class(){
     //detect section
     const sections = document.querySelectorAll('section');
@@ -72,7 +72,6 @@ function add_active_class(){
     for(let i = 0; i <sections.length; i++){
         let y = sections[i].getBoundingClientRect().y;
         if(y< ACTIVE_TOP_COORD_PERCENT*window.innerHeight && y >0){
-            //console.log(sections[i].id , sections[i].getBoundingClientRect().y);
             cur_active_section_index = i;
             break;
         }
@@ -88,11 +87,9 @@ function add_active_class(){
     sections[cur_active_section_index].classList.add('your-active-class');
 }
 
-// Scroll to anchor ID using scrollTO event
-
 build_the_nav();
 //add_active_class();
-add_mousewheel_listener_to_sections()
+add_mousewheel_listener_to_sections();
 
 
 /**
