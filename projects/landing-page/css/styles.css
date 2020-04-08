@@ -56,6 +56,7 @@ main {
 }
 
 section {
+    /* position: relative; */
     position: relative;
     min-height: 80vh;
 }
@@ -74,6 +75,9 @@ section {
 .navbar__menu li{
     display: inline-block;
     padding : 10px;
+    font-size: 0.7em;
+    text-align: center;
+
 }
 
 .navbar__menu a{
@@ -204,7 +208,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
     background: rgb(0, 0, 0);
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
     
 }
 
@@ -217,6 +221,9 @@ section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
+/* html {
+    scroll-behavior: smooth;
+} */
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {

@@ -8,12 +8,18 @@ body{
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
+    background: #35bcf2;
     color: #f0d43a;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+}
+
+.horizontal_feel{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
 }
 
 .holder{
@@ -57,7 +63,7 @@ input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
+    background:#ebfbff;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
@@ -79,7 +85,7 @@ h1{
 }
 
 textarea{
-    background:#22b2da;
+    background:#eafbff;
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
