@@ -1,0 +1,4 @@
+curl https://api.aylien.com/api/v1/classify \
+   -H "X-AYLIEN-TextAPI-Application-Key": f860afed185aa4a5faccca55a5a3cae5" \
+   -H "X-AYLIEN-TextAPI-Application-ID": 3fbdfac2" \
+   -d url"=https://www.cnn.com/2020/04/12/health/us-coronavirus-updates-sunday/index.html"
