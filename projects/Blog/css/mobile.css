@@ -1,0 +1,20 @@
+@media(max-width:424px) {
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-template-rows: 4em auto 4em;
+        grid-template-areas: "header header" "main main" "footer footer";
+    }
+    main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+    }
+    aside {
+        display: none;
+    }
+}
