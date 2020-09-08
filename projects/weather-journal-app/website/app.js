@@ -16,7 +16,7 @@ document.getElementById('generate').addEventListener('click', (e) => {
 // getWeather Function
 const getWeather = async (zip, feelings) => {
     // Fetch the Response
-    const resp = fetch(`${BASE_URL}${zip}${API_KEY}`)
+    const resp = await fetch(`${BASE_URL}${zip}${API_KEY}`)
         .then(response => response.json())
         .then(data => {
             return postData('/add', {
@@ -41,8 +41,8 @@ const getWeather = async (zip, feelings) => {
 
 // postData Function
 
-const postData = (url = '', data = {}) => {
-    return fetch(url, {
+const postData = async (url = '', data = {}) => {
+    return await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
