@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +6,7 @@
   <title>Manipulating the DOM</title>
   <!-- Load Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
   <!-- HTML Follows BEM naming conventions 
@@ -15,11 +14,13 @@
   <header class="page__header">
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
+	   <ul id="navbar__list">
+
+     </ul>
     </nav>
   </header>
   <main>
-    <header class="main__hero">
+    <header class="main__hero"  id='topOfPage'   >
       <h1>Landing Page </h1>
     </header>
     <!-- Each Section has an ID (used for the anchor) and 
@@ -50,10 +51,15 @@
         <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
       </div>
     </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
 
+  </main>
+ <div align="center">
+  <a id="backToTopButton"  href="#topOfPage"   style="display:none">Back to top!</a>
+  </div>
+			<script   src="app.js" ></script>
+
+					  <footer class="page__footer">
+					      <p>&copy Udacity</p>
+  </footer>
 </body>
 </html>
