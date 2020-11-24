@@ -1,27 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Josefin+Sans:700|Overpass&display=swap');
+
 body{
-    background: #fffff8;
+    background: rgb(174,238,200);
+    background: linear-gradient(180deg, rgba(43,128,57,1) 0%, rgba(174,238,200,1) 100%);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(200px, auto);
+    grid-template-areas:
+        "hd"
+        "zip"
+        "fl"
+        "gen"
+        "ent";
 }
 
 #app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
+/*    height:100vh; */
+    background: whitesmoke;
+    color: black;
     grid-gap: 1em;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Hind Siliguri', sans-serif;;
+    border: 6px solid black;
+    border-radius: 5%;
+    line-height: 2.5em;
 }
 
 .holder{
-
+    margin: 20px auto;
 }
 
 .entry{
-    background: rgba(59, 74, 107, .4);
+    width: 80%;
+    margin: 20px auto;
+    grid-area: ent;
+    padding: 30px 20px 100px 20px;
+    border: 2px solid black;
+    background-color: #83CC8F;
 }
 
 #entryHolder{
@@ -41,10 +62,26 @@ body{
 }
 
 .headline {
-
+    grid-area: hd;
+    padding-left: 30px;
 }
-.title{
 
+.zip {
+    grid-area: zip;
+}
+
+.feel {
+    grid-area: fl;
+}
+
+.generate-button {
+    grid-area: gen;
+}
+
+.title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    color: #3b4a6b;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -57,32 +94,35 @@ input{
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
+    background:rgb(174,238,200);
+    color: #3C5E42;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+    font-family: 'Overpass', sans-serif;
+    border: 1px solid black;
 }
 
 button{
     width: 400px;
     height: 100px;
     background: #3b4a6b;
-    color: #f0d43a;
+    color: #2B8039;
     font-size: 26px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Overpass', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
 }
 h1{
-    font-size: 36px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    color: #3b4a6b;
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
+    background:rgb(174,238,200);
+    color: #2B8039;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Overpass', sans-serif;
+    border: 1px solid black;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
@@ -93,19 +133,19 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    color: #3C5E42; 
+    font-family: 'Overpass', sans-serif;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    color: #3C5E42; 
+    font-family: 'Overpass', sans-serif;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    color: #3C5E42; 
+    font-family: 'Overpass', sans-serif;
 
 } 

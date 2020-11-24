@@ -48,6 +48,7 @@ p {
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
+    padding-right: 15px;
 }
 
 .main-hero {
@@ -65,6 +66,8 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
+    display: flex;
+    justify-content: space-around;
     padding-left: 0;
     margin: 0;
     text-align: right;
@@ -83,9 +86,25 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-    background: #333;
+    background: #83C4A7;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+#up-button {
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 25px;
+    border: 1px;
+    height: 50px;
+    width: 30px;
+    border-color: black;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 5px gray;
+    background-color: #12264B;
+    color: white;
+    
 }
 
 /* Header Styles */
