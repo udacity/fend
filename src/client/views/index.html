@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,32 +8,29 @@
 
 <body>
     <header>
-        <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
-        </div>
+
     </header>
 
     <main>
-        <section>
-            <form class="" onsubmit="return handleSubmit(event)">
-                <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return handleSubmit(event)"
-                    onsubmit="return handleSubmit(event)">
-            </form>
-            <section>
 
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
-                </section>
+
+        <form onsubmit="handleSubmit(event)">
+            <label for="url-input">Enter URL of article or blog for sentiment analysis:</label>
+            <input id="url-input" type="text" name="input" value="" placeholder="Article or blog URL goes here ...">
+            <input type="submit" name="" value="Run Sentiment Analysis">
+        </form>
+
+        <section>
+            <strong>Form Results:</strong>
+            <div id="results"></div>
+        </section>
     </main>
 
     <footer>
         <p>This is a footer</p>
     </footer>
+
+    <script src="./src/client/js/formHandler.js"></script>
 
 </body>
 

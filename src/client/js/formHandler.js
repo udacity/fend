@@ -1,16 +1,18 @@
 function handleSubmit(event) {
   event.preventDefault();
 
-  // check what text was put into the form field
-  let formText = document.getElementById("name").value;
-  checkForName(formText);
+  let url = document.getElementById("url-input").value;
 
-  console.log("::: Form Submitted :::");
-  fetch("http://localhost:8080/test")
-    .then((res) => res.json())
-    .then(function (res) {
-      document.getElementById("results").innerHTML = res.message;
-    });
+  var requestOptions = {
+    method: "POST",
+    body: JSON.stringify({ url }),
+    headers: { "Content-Type": "application/json" },
+  };
+
+  fetch("http://localhost:5000/sentiment-analysis", requestOptions)
+    .then((response) => response.json())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
 }
 
-export { handleSubmit };
+// export { handleSubmit };
