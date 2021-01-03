@@ -114,7 +114,11 @@ function handleSubmit(event) {
           options: {},
         });
       })
-      .catch((error) => console.log("error", error));
+      .catch((error) => {
+        console.log("error", error);
+        alert.style.display = "block";
+        alert.innerHTML = `ERROR: Server Error.`;
+      });
   } else {
     // set an error alert when URL is not valid.
     alert.style.display = "block";
