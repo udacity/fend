@@ -1,13 +1,10 @@
 const dotenv = require("dotenv");
-dotenv.config();
-
 const express = require("express");
-const mockAPIResponse = require("./mockAPI.js");
-
 const fetch = require("node-fetch");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+dotenv.config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -81,7 +78,3 @@ function analyzeURL(request, response) {
     })
     .catch((err) => response.send({ msg: "server error", err }));
 }
-
-app.get("/test", function (req, res) {
-  res.send(mockAPIResponse);
-});
