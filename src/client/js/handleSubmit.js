@@ -1,24 +1,24 @@
 import { isURLValid } from "./formValidation";
+import { spinner_OFF, spinner_ON } from "./handleSpinner";
+import { triggerAlert } from "./handleAlert";
 
 const form = document.getElementById("form");
-const button = document.getElementById("submit-btn");
-const spinner = document.getElementById("submit-spinner");
+const url = document.getElementById("url-input");
 const sentiment_results = document.getElementById("sentiment-results");
 const overall_sentiment = document.getElementById("overall-sentiment");
 const sentiment_emoji = document.getElementById("sentiment-emoji");
 const alert = document.getElementById("alert");
+const spinner = document.getElementById("submit-spinner");
+const button = document.getElementById("submit-btn");
 
 form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
-  handleSubmit(event);
+  handleSubmit(event, url.value);
 }
 
-function handleSubmit(event) {
+function handleSubmit(event, url) {
   event.preventDefault();
-
-  let url = document.getElementById("url-input").value;
-  spinner.classList.add("spinner-border");
-  button.disabled = true;
+  spinner_ON(spinner, button);
 
   if (isURLValid(url)) {
     var requestOptions = {
@@ -31,10 +31,8 @@ function handleSubmit(event) {
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
-        spinner.classList.remove("spinner-border");
-        button.disabled = false;
+        spinner_OFF(spinner, button);
         sentiment_results.style.display = "initial";
-
         /**
          * response object:
          * {
@@ -47,7 +45,6 @@ function handleSubmit(event) {
          *    }
          * }
          */
-
         if (result.overall_sentiment === "P+") {
           overall_sentiment.innerHTML = "P+ - Strong Positive.";
           sentiment_emoji.classList.add("fa-grin-stars");
@@ -72,7 +69,6 @@ function handleSubmit(event) {
         var chart = new Chart(ctx, {
           // The type of chart we want to create
           type: "horizontalBar",
-
           // The data for our dataset
           data: {
             labels: [
@@ -109,22 +105,20 @@ function handleSubmit(event) {
               },
             ],
           },
-
           // Configuration options go here
           options: {},
         });
       })
       .catch((error) => {
         console.log("error", error);
-        alert.style.display = "block";
-        alert.innerHTML = `ERROR: Server Error.`;
       });
   } else {
     // set an error alert when URL is not valid.
-    alert.style.display = "block";
-    alert.innerHTML = `ERROR: Invalid URL! Valid URLs begin with "http://" or "https://"`;
-    spinner.classList.remove("spinner-border");
-    button.disabled = false;
+    triggerAlert(
+      alert,
+      `ERROR: Invalid URL! Valid URLs begin with "http://" or "https://"`
+    );
+    spinner_OFF(spinner, button);
   }
 }
 
