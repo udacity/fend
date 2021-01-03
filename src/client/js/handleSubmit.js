@@ -6,6 +6,7 @@ const spinner = document.getElementById("submit-spinner");
 const sentiment_results = document.getElementById("sentiment-results");
 const overall_sentiment = document.getElementById("overall-sentiment");
 const sentiment_emoji = document.getElementById("sentiment-emoji");
+const alert = document.getElementById("alert");
 
 form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
@@ -70,14 +71,20 @@ function handleSubmit(event) {
         var ctx = document.getElementById("sentiment-chart").getContext("2d");
         var chart = new Chart(ctx, {
           // The type of chart we want to create
-          type: "bar",
+          type: "horizontalBar",
 
           // The data for our dataset
           data: {
-            labels: ["P+", "P", "NEU", "N", "N+"],
+            labels: [
+              "P+ - Strong Positive",
+              "P - Positive",
+              "NEU - Neutral",
+              "N - Negative",
+              "N+ - Strong Negative",
+            ],
             datasets: [
               {
-                label: "Article / Blog Sentiment Breakdown by Sentences Found",
+                label: "Sentiment Type by Count",
                 backgroundColor: [
                   "rgba(255, 99, 132, 0.2)",
                   "rgba(255, 159, 64, 0.2)",
@@ -110,7 +117,10 @@ function handleSubmit(event) {
       .catch((error) => console.log("error", error));
   } else {
     // set an error alert when URL is not valid.
-    alert("Not a valid URL!");
+    alert.style.display = "block";
+    alert.innerHTML = `ERROR: Invalid URL! Valid URLs begin with "http://" or "https://"`;
+    spinner.classList.remove("spinner-border");
+    button.disabled = false;
   }
 }
 
