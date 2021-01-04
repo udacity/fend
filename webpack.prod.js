@@ -1,3 +1,4 @@
+const WorkboxPlugin = require("workbox-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -34,5 +35,6 @@ module.exports = {
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false,
     }),
+    new WorkboxPlugin.GenerateSW(),
   ],
 };
