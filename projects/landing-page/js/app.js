@@ -24,6 +24,7 @@ const navList = document.getElementById("navbar__list")
 //find the list of sections and the total number to be added to the nav list
 const pageSections = document.querySelectorAll("section")
 const noOfSections = pageSections.length
+console.log(noOfSections)
 /**
  * End Global Variables
 */
@@ -54,8 +55,7 @@ function buildNav(){
 function isOnScreen(e) {
     const bounding = e.getBoundingClientRect()
     return (
-        bounding.top >= 0
-        && bounding.bottom <= window.innerHeight
+        bounding.top < 300 && bounding.top > -300
     )
 }
 
@@ -75,7 +75,8 @@ for (let i=1; i<=navItems.length; i++) {
     navItems[i-1].addEventListener('click', function (e) {
         let id = `#section${i}`
         let section = document.querySelector(id)
-        section.scrollIntoView()
+        section.scrollIntoView({behavior: "smooth"})
+        preventDefault()
     });
 }
 
