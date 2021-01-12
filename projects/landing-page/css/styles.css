@@ -68,6 +68,8 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar__menu li {
@@ -86,6 +88,7 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+    cursor: pointer;
 }
 
 /* Header Styles */
