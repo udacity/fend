@@ -1,0 +1,27 @@
+footer {
+    padding: 0.5rem 0 0;
+    opacity: 0.7;
+    background-color: aliceblue;
+}
+
+.fnav ul {
+    display: flex;
+    justify-content: center;
+}
+
+
+.fnav li {
+    padding: 0 0.25em;
+    font-size: 1.75em;
+    a{
+        color: #076b6f;
+        text-decoration: none;
+    }
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: 0.75em;
+    padding: 0 0.5rem 0.5rem;
+}

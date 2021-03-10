@@ -1,21 +1,38 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+    border-bottom: 1px solid #52989a;
+    border-radius: 0px;
     padding: 40px;
+}
 
-    input {
-        padding: 5px 20px;
-        width: 100%;
-        line-height: 16px;
-        margin: 10px 0;
+section {
+    strong {
+        font-weight: 500;
+        color: #0f5053;
     }
-
-    .form-control{
-        padding: 5px 0px;
-        background-color: bisque;
-        width: 100%;
-        text-indent: 1em;
+    #agreement{
+        margin-top: 1rem;
     }
 }
 
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #31a9ad;
+}
 
+.sub-btn{
+    width: 50%;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #31a9ad;
+    color: white;
+    font-weight: 700;
+    border: 1px solid #31a9ad;
+    &:hover {
+        background-color: #fff;
+        color: #31a9ad;
+    }
+}

@@ -2,37 +2,61 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Sentiment Analyzer</title>
+        <script src="https://kit.fontawesome.com/1aac26dbd0.js" crossorigin="anonymous"></script>
+
     </head>
 
     <body>
 
         <header>
             <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+              <h1>Sentiment Analyzer</h1>  
             </div>
         </header>
 
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" placeholder="Please Enter URL Name">
+                    <input class="sub-btn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div id="agreement"></div>
+                <div id="subjectivity"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <nav class="fnav">
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/AbdelrahmanOsama" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                </ul>
+                <div class="copyright">© 2021</div>
+            </nav>
         </footer>
+
+        <div id="spinner"  style="display:none">
+            <span class="loader"></span>
+        </div>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
 
     </body>
 </html>

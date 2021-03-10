@@ -1,5 +1,13 @@
+$keycolor: rgb(253, 148, 192);
+
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+    justify-content: center;
+    padding: 25px 40px;
+    background-color: #f0f8ff3b;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #52989a;    
 }
