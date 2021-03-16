@@ -1,1 +1,0 @@
-# Assets for HTML Syntax

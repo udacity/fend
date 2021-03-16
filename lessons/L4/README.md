@@ -1,1 +1,0 @@
-# Assets for How to Write Code Faster
