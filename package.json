@@ -4,9 +4,10 @@
   "webpack": "^4.43.0",
   "webpack-cli": "^3.3.11"
  },
- "scripts": {
-  "build": "webpack"
- },
+"scripts": {
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+},
  "devDependencies": {
   "@babel/core": "^7.13.10",
   "@babel/preset-env": "^7.13.10",
