@@ -1,3 +1,5 @@
+//Dependency to fetch data
+const fetch = require("node-fetch");
 //Configure dotenv to be able to use environment variables found in the .env file at the root folder
 const dotenv = require('dotenv');
 dotenv.config();
@@ -20,16 +22,29 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'))
 
 
-
-setTimeout(function(){ console.log(JSON.stringify(mockAPIResponse)) }, 5000);
-
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.get('/test', function (req, res) {
-    res.json(mockAPIResponse);
+app.get('/textClassification', function (req, res) {
+    res.sendFile('dist/textClassification.html')
+})
+
+app.post('/makeSummary', async(req, res)=>{
+	var urlLink = req.body.urlLink;
+	var summarySize = req.body.summarySize;
+	const mySummary = await fetch('https://api.meaningcloud.com/summarization-1.0?key='+process.env.license_key+'&url='+urlLink+'&sentences='+summarySize, {
+		method: "post"
+	});
+	
+	try {
+		const summary = await mySummary.json();
+		//res.json(summary)
+		res.send(summary)
+	} catch (error){
+		console.log("error", error)
+	}
+    
 })
 
 // designates what port the app will listen to for incoming requests

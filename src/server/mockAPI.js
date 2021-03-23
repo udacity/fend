@@ -16,7 +16,7 @@ request('https://api.meaningcloud.com/summarization-1.0?key='+process.env.licens
   if (err) { return console.log(err); }
   //console.log(body);
   module.exports = body
-  console.log(module.exports)
+  //console.log(module.exports)
   return body
   //console.log(body.explanation);
 });

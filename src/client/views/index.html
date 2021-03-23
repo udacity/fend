@@ -3,40 +3,59 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.scss">
-        <link rel="stylesheet" href="/styles/base.scss">
-        <link rel="stylesheet" href="/styles/header.scss">
-        <link rel="stylesheet" href="/styles/form.scss">
-        <link rel="stylesheet" href="/styles/footer.scss">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--
+        <link rel="stylesheet" href="./styles/resets.css">
+        <link rel="stylesheet" href="./styles/base.scss">
+        <link rel="stylesheet" href="./styles/header.scss">
+        <link rel="stylesheet" href="./styles/form.scss">
+        <link rel="stylesheet" href="./styles/footer.scss">
+        -->
     </head>
 
     <body>
-
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Natural Language Processing</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Summary</a></li>
+                    
+                  </ul>
+                </div>
+              </nav>
+        
+              <img class="logo" src="./resources/logo.png" alt="My Logo"> 
 
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="urlLink" type="text" name="input" value="" onblur="onBlur()" placeholder="URL Link">
+                    <br> 
+                    <label>Enter the summary size </label>
+                    <br>
+                    <select class="form-control" id="summarySize">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    <input class="btn btn-primary" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <strong>Summary:</strong> <br><br>
+                <div id="results" style="color: white;"></div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p> Natural Language Processing Project </p>
         </footer>
 
         <script>
