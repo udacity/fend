@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
@@ -14,10 +14,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "sass": "^1.32.10",
     "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "meaningCloud_textapi": "^0.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
@@ -31,6 +33,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^1.4.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "jest": "^25.3.0"
   }
 }
