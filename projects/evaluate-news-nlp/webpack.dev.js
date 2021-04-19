@@ -15,7 +15,11 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader"
             }
-        ]
+        ],
+        output: {
+            libraryTarget: 'var',
+            library: 'Client'
+        }
     },
     plugins: [
         new HtmlWebPackPlugin({
@@ -31,5 +35,8 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         })
-    ]
+    ],
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
 }
