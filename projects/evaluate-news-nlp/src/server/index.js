@@ -8,11 +8,26 @@ var textapi = new MeaningCloud ({
     application_key: process.env.API_KEY
   });
 
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
+
 const app = express()
 
-app.use(express.static('dist'))
+app.use(express.static('dist'));
+app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 console.log(__dirname)
+
+app.post('/test', (req, res) => {
+    textapi.sentiment({
+        'url': req.body.text
+    }, function(error, response) {
+        res.send(response);
+    });
+});
 
 app.get('/', function (req, res) {
     // res.sendFile('dist/index.html')
