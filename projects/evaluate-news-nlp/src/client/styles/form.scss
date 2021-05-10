@@ -1,5 +1,6 @@
+$border_color : #545454;
 form {
-    border: 1px solid #545454;
+    border: 1px solid $border_color;
     border-radius: 3px;
     padding: 40px;
 }
