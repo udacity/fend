@@ -6,11 +6,12 @@ function handleSubmit(event) {
     
 
     console.log("::: Form Submitted :::")
-    request_body = {'sentence':formText}
+    var request_body = {'sentence':formText}
     fetch('http://localhost:8081/sentiment',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'http://localhost'
         },
         body: JSON.stringify(request_body),
     })

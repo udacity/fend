@@ -7,7 +7,7 @@ async function request_sentiment(sentence) {
         'txt': sentence
     }
 
-    response = await fetch('https://api.meaningcloud.com/sentiment-2.1', {
+    var response = await fetch('https://api.meaningcloud.com/sentiment-2.1', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

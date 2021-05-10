@@ -10,6 +10,7 @@ app.use(express.static('dist'))
 
 var corsOptions = {
     origin: 'http://localhost:8082',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE" ,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 console.log(__dirname)
@@ -29,8 +30,10 @@ app.get('/test',cors(corsOptions) ,function (req, res) {
 })
 
 app.post('/sentiment',cors(corsOptions) ,function (req, res) {
-    sentence = req.body
-    response = await meaningcloud.request_sentiment(sentence)
-    res.send(response)
+    var sentence = req.body
+    var response = meaningcloud.request_sentiment(sentence)
+    res.send({
+        'message':response
+    })
 
 })
