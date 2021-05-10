@@ -2,7 +2,7 @@ var path = require('path')
 const express = require('express')
 var cors = require('cors')
 
-const mockAPIResponse = require('./mockAPI.js')
+const meaningcloud = require('./meaningcloud.js')
 
 const app = express()
 
@@ -26,4 +26,11 @@ app.listen(8081, function () {
 
 app.get('/test',cors(corsOptions) ,function (req, res) {
     res.send(mockAPIResponse)
+})
+
+app.post('/sentiment',cors(corsOptions) ,function (req, res) {
+    sentence = req.body
+    response = await meaningcloud.request_sentiment(sentence)
+    res.send(response)
+
 })
