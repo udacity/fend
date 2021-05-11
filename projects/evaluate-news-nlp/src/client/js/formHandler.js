@@ -5,7 +5,7 @@ async function handleSubmit(event) {
     let formText = document.getElementById('name').value
     if (formText == "") {
         alert('Please enter text or a url to receive results')
-        return
+        throw new Error('Empty input');
     }
 
     console.log("::: Form Submitted :::")

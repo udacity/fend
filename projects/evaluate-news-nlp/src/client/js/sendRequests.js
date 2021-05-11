@@ -1,4 +1,8 @@
 async function requestSentiment(formText){
+    if (formText==""){
+        throw new Error('Empty input');
+    }
+    
     var request_body = {'sentence':formText}
     var response = await fetch('http://localhost:8081/sentiment',{
         method: 'POST',
