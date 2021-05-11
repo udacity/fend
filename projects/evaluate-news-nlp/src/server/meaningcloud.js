@@ -1,43 +1,38 @@
 const dotenv = require('dotenv');
+const fetch = require('node-fetch');
+var FormData = require('form-data');
+dotenv.config();
 async function request_sentiment(sentence) {
     // get the sentence and return the sentiment or error
-    request_body = {
-        'key': process.env.API_KEY,
-        'lang': 'auto',
-        'txt': sentence
-    }
+    console.log(10)
+    console.log(process.env.API_KEY)
+    console.log(sentence)
+    const formdata = new FormData();
+    formdata.append("key", process.env.API_KEY);
+    formdata.append("txt", sentence);
+    formdata.append("lang", "auto"); // 2-letter code, like en es fr ...
+    const requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
+      };
+    
 
-    var response = await fetch('https://api.meaningcloud.com/sentiment-2.1', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(request_body),
-        }).then(res => res.json())
-        .then(res => function () {
+    const response = await fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
+        .then(response => ({
+            status: response.status,
+            body: response.json()
+        }))
+        .then(({
+            status,
+            body
+        }) => {console.log(status, body)
+                return body})
+        .catch(error => {console.log('error', error)
+                        return error});
 
-            if (res['status']['msg'] === 'OK') {
-                return res['sentence_list'][0]['segment_list'][0]['text']
-
-            } else {
-                console.error('Error:', res);
-                return -1
-            }
-
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            return -1
-        });
-    if (response != -1) {
         return response
-    } else {
-        return{
-            'status': 'not OK',
-            'message': 'this is a message',
-            'time': 'now'
-        }
-    }
+    
 }
 
 module.exports = request_sentiment

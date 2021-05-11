@@ -1,24 +1,30 @@
-function handleSubmit(event) {
+async function handleSubmit(event) {
     event.preventDefault()
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    
+    if (formText == "") {
+        alert('Please enter text or a url to receive results')
+        return
+    }
 
     console.log("::: Form Submitted :::")
-    var request_body = {'sentence':formText}
-    fetch('http://localhost:8081/sentiment',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin':'http://localhost'
-        },
-        body: JSON.stringify(request_body),
-    })
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+    var res = await Client.requestSentiment(formText)
+
+    console.log(res)
+    var stat = res.status
+    if (stat == '0') {
+        var txt = Client.formatText(res)
+        document.getElementById('results').innerHTML = txt
+    } else if (stat == '200') {
+        alert("Please enter text or a url to receive results")
+    } else {
+        alert("Please enter a valid input to receive results")
+
+    }
+
 }
 
-export { handleSubmit }
+export {
+    handleSubmit
+}
