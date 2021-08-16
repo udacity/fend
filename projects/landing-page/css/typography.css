@@ -1,0 +1,101 @@
+/************************/
+/* Typography */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #2e2e2e;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+input {
+    padding: 10px 5px;
+    border: 1px solid #999;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+blockquote {
+    font-size: 2rem;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+}
+
+figure {
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+#primary-color {
+    color: #0d5773;
+}
+
+#secondary-color {
+    color: #e64d4d;
+}
+
+.primary-btn {
+    background-color: #2c7d9b;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #e64d4d;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.padding-none {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media(min-width: 768px) {
+    figure {
+        font-size: 1rem;
+    }
+}
+/* Typography End */
+/************************/
