@@ -1,211 +1,59 @@
-<!doctype html>
+<!DOCTYPE >
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon Dev Solutions</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="content" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
 </head>
-
 <body>
-    <header class="header">
-        <nav class="navbar navbar-fixed">
-            <a href="index.html" class="nav-logo">
-                <figure class="text-center">
-                    <img src="images/moon-logo.png" alt="Moon logo" width="80">
-                    <figcaption>Dev Solutions</figcaption>
-                </figure>
-            </a>
-            <ul class="nav-menu">
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Landing Page </h1>
     </header>
     <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="banner" class="banner" sectionName="Home">
-        <a href="#" rel="" target="_blank">
-            <strong>
-                The solution topics
-                <br>
-                for all your tech needs
-            </strong>
-        </a>
-    </section>
-    <section id="ourTopics" class="container text-center" sectionName="Our Topics">
-        <h1 id="primary-color" class="text-center">
-            Our Topics
-        </h1>
-        <div class="our-topics">
-            <a href="#" class="our-topics-cards topic-1-card text-center">
-                <p class="card-title">
-                    <b>
-                        Website services
-                    </b>
-                </p>
-            </a>
-            <a href="#" class="our-topics-cards topic-2-card text-center">
-                <p class="card-title">
-                    <b>
-                        Digital Markting
-                    </b>
-                </p>
-            </a>
-            <a href="#" class="our-topics-cards topic-3-card text-center">
-                <p class="card-title">
-                    <b>
-                        IT Support for Businesses
-                    </b>
-                </p>
-            </a>
-            <a href="#" class="our-topics-cards topic-4-card text-center">
-                <p class="card-title">
-                    <b>
-                        Mobile Apps
-                    </b>
-                </p>
-            </a>
-        </div>
-    </section>
-    <section id="AboutUs" class="container text-center" sectionName="About Us">
-        <h1 id="primary-color">
-            About Us
-        </h1>
-        <h2>
-            Our highly passionate techies will get you covered
-        </h2>
-        <div class="about-us">
-            <div class="info-1">
-                <img src="images/on-request.png" alt="Available On-Request" width="50px" />
-                <h3 id="secondary-color">
-                    Available On-Request
-                </h3>
-                <p>
-                    <br>
-                    <br>
-                    Donec lectus lectus, dictum sed vehicula a,
-                    <br>
-                    maximus ac dolor. Phasellus dignissim quam in
-                    <br>
-                    mauris volutpat ultrices. Donec lectus lectus,
-                    <br>
-                    dictum sed vehicula a, maximus ac dolor.
-                    <br>
-                    Phasellus dignissim quam in mauris
-                    <br>
-                    volutpat ultrices. Donec lectus lectus,
-                    <br>
-                    dictum sed vehicula a, maximus ac dolor.
-                    <br>
-                    Phasellus dignissim quam in mauris
-                    <br>
-                    volutpat ultrices.
-                    <br>
-                    <br>
-                </p>
-                <a href="#" id="primary-color">
-                    Read more >>
-                </a>
-            </div>
-            <div class="info-2">
-                <img src="images/world-wide-services.png" alt="World Wide Services" width="50px" />
-                <h3 id="secondary-color">
-                    World Wide Services
-                </h3>
-                <p>
-                    <br>
-                    <br>
-                    Donec lectus lectus, dictum sed vehicula a,
-                    <br>
-                    maximus ac dolor. Phasellus dignissim quam in
-                    <br>
-                    mauris volutpat ultrices. Donec lectus lectus,
-                    <br>
-                    dictum sed vehicula a, maximus ac dolor.
-                    <br>
-                    Phasellus dignissim quam in mauris
-                    <br>
-                    volutpat ultrices. Donec lectus lectus,
-                    <br>
-                    dictum sed vehicula a, maximus ac dolor.
-                    <br>
-                    Phasellus dignissim quam in mauris
-                    <br>
-                    volutpat ultrices.
-                    <br>
-                    <br>
-                </p>
-                <a href="#" id="primary-color">
-                    Read more >>
-                </a>
-            </div>
-            <div class="info-3">
-                <img src="images/certified.png" alt="Certified Techies" width="50px" />
-                <h3 id="secondary-color">
-                    Certified Techies
-                </h3>
-                <p>
-                    <br>
-                    <br>
-                    Donec lectus lectus, dictum sed vehicula a,
-                    <br>
-                    maximus ac dolor. Phasellus dignissim quam in
-                    <br>
-                    mauris volutpat ultrices. Donec lectus lectus,
-                    <br>
-                    dictum sed vehicula a, maximus ac dolor.
-                    <br>
-                    Phasellus dignissim quam in mauris
-                    <br>
-                    volutpat ultrices. Donec lectus lectus,
-                    <br>
-                    dictum sed vehicula a, maximus ac dolor.
-                    <br>
-                    Phasellus dignissim quam in mauris
-                    <br>
-                    volutpat ultrices.
-                    <br>
-                    <br>
-                </p>
-                <a href="#" id="primary-color">
-                    Read more >>
-                </a>
-            </div>
-        </div>
+    <section id="section1" data-nav="Section 1" class="your-active-class">
+      <div class="landing__container">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
 
-        <div class="text-center" style="margin-top: 200px;">
-            <img src="images/profile.png" alt="Author photo" width="200px" />
-            <h1>
-                <br>
-                Ayman Darwish
-                <br>
-            </h1>
-        </div>
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
     </section>
-    <footer class="footer">
-        <a href="index.html">
-            <figure class="text-center">
-                <img src="images/moon-logo.png" alt="Moon logo" width="80">
-                <figcaption>Dev Solutions</figcaption>
-            </figure>
-        </a>
-        <p class="copy-right">
-            <u>
-                &copy; Copyright 2021.
-                <a href="index.html">Moon Dev Solutions</a>
-            </u>
-        </p>
-    </footer>
-    <a class="scroll-top" id="goTop">^</a>
-    <script src="js/app.js"></script>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+
 </body>
-
 </html>
