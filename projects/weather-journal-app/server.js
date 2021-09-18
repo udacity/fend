@@ -23,6 +23,7 @@ app.use(express.static('website'));
 
 // Setup Server
 const port = 8000;
+
 // Spin up the server
 const server = app.listen(port, listening);
 // const server = app.listen(port, () => { console.log(`running on localhost: ${port}`) })
@@ -33,6 +34,46 @@ function listening() {
 };
 
 // Create JS object
-const projectData = []
+const fakeData = {
+    animal: 'Lion',
+    fact: 'Lions are fun',
+    // userResponse: 'TestData'
+}
+
+// GET route
+app.get('/animalData', getfakeData)
+
+function getfakeData (req, res) {
+  res.send(fakeData);
+};
+
+const animalData = [];
+
+app.get('/all', getData)
+
+function getData(req, res){
+    res.send(animalData)
+    console.log(animalData)
+}
+
+// POST route
+app.post('/addAnimal', addAnimal);
+
+function addAnimal(req,res){
+console.log(req.body)
+  newEntry = {
+    animal: req.body.animal,
+    facts: req.body.fact,
+    fav: req.body.fav
+  }
+
+  animalData.push(newEntry)
+  console.log(animalData)
+}
 
 
+// app.post('/date', addDate);
+
+// function addDate (req,res){
+//     data.push(req.body);
+// };

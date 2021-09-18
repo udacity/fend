@@ -10,3 +10,12 @@
 
 
 /* Function to GET Project Data */
+
+
+// Ayman -- to use after
+// TODO
+
+// Faking an API call
+getAnimal('/fakeAnimalData')
+
+// New Syntax!
