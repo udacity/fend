@@ -36,14 +36,14 @@ function listening() {
 // Create JS object
 const fakeData = {
     animal: 'Lion',
-    fact: 'Lions are fun',
+    fact: 'Lions are fun'
     // userResponse: 'TestData'
 }
 
 // GET route
-app.get('/animalData', getfakeData)
+app.get('/fakeAnimalData', getFakeData)
 
-function getfakeData (req, res) {
+function getFakeData (req, res) {
   res.send(fakeData);
 };
 
@@ -68,6 +68,7 @@ console.log(req.body)
   }
 
   animalData.push(newEntry)
+  res.send(animalData)
   console.log(animalData)
 }
 

@@ -9,15 +9,15 @@ document.getElementById('generate').addEventListener('click', performAction);
 
 function performAction(e){
     // const fav =  document.getElementById('feelings').value;
-    const newAnimal =  document.getElementById('zip').value;
-    const favFact =  document.getElementById('feelings').value;
+    const animal =  document.getElementById('zip').value;
+    const fav =  document.getElementById('feelings').value;
 // API call
-    getAnimal('/animalData')
+    getAnimal('/fakeAnimalData')
     // New Syntax!
     .then(function(data){
         console.log(data)
         // Add data to POST request
-        postData('/addAnimal', {animal:data.animal, fact: data.fact, fav:favFact} );
+        postData('/addAnimal', {animal:data.animal, fact: data.fact, fav:fav} );
     })
     .then(
         updateUI()
@@ -63,9 +63,9 @@ const updateUI = async () => {
     const request = await fetch('/all');
     try{
       const allData = await request.json();
-      document.getElementById('animalName').innerHTML = allData[0].animal;
-      document.getElementById('animalFact').innerHTML = allData[0].facts;
-      document.getElementById('animalFav').innerHTML = allData[0].fav;
+      document.getElementById('date').innerHTML = allData[0].animal;
+      document.getElementById('temp').innerHTML = allData[0].facts;
+      document.getElementById('content').innerHTML = allData[0].fav;
   
     }catch(error){
       console.log("error", error);
