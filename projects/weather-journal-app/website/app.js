@@ -1,30 +1,27 @@
-/* Global Variables */
-
 // Personal API Key for OpenWeatherMap API
-let baseURL = 'https://api.nasa.gov/planetary/apod?api_key='
-let apiKey = 'nJRv2hgsznJjeVChCrnEO3BauboQpoTqa6GhtIHg';
-// const newAnimal =  document.getElementById('feelings').value;
+let baseURL = 'api.openweathermap.org/data/2.5/weather?q='
+let apiKey = '0fec4ccc9410e0d124aa99dffb0bb979';
 
 document.getElementById('generate').addEventListener('click', performAction);
 
 function performAction(e){
-    // const fav =  document.getElementById('feelings').value;
-    const animal =  document.getElementById('zip').value;
-    const fav =  document.getElementById('feelings').value;
+  // const fav =  document.getElementById('feelings').value;
+  const zip =  document.getElementById('zip').value;
+  const feelings =  document.getElementById('feelings').value;
 // API call
-    getAnimal('/fakeAnimalData')
-    // New Syntax!
-    .then(function(data){
-        console.log(data)
-        // Add data to POST request
-        postData('/addAnimal', {animal:data.animal, fact: data.fact, fav:fav} );
-    })
-    .then(
-        updateUI()
-      )
+  getWeather('/projectData')
+  // New Syntax!
+  .then(function(data){
+      console.log(data)
+      // Add data to POST request
+      postData('/addWeather', {date: data.newDate, temp: data.temp, content:feelings} );
+  })
+  .then(
+      updateUI()
+    )
 }
 
-const getAnimal = async (url)=>{
+const getWeather = async (url)=>{
   const res = await fetch(url);
   try {
 // Transform into JSON
@@ -40,37 +37,37 @@ const getAnimal = async (url)=>{
 // Async POST
 const postData = async ( url = '', data = {})=>{
 
-    const response = await fetch(url, {
-    method: 'POST', 
-    credentials: 'same-origin', 
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  const response = await fetch(url, {
+  method: 'POST', 
+  credentials: 'same-origin', 
+  headers: {
+      'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data), // body data type must match "Content-Type" header
 
-  });
+});
 
-    try {
-      const newData = await response.json();
-      console.log(newData);
-      return newData;
-    }catch(error) {
-    console.log("error", error);
-    }
+  try {
+    const newData = await response.json();
+    console.log(newData);
+    return newData;
+  }catch(error) {
+  console.log("error", error);
+  }
 };
 
 const updateUI = async () => {
-    const request = await fetch('/all');
-    try{
-      const allData = await request.json();
-      document.getElementById('date').innerHTML = allData[0].animal;
-      document.getElementById('temp').innerHTML = allData[0].facts;
-      document.getElementById('content').innerHTML = allData[0].fav;
-  
-    }catch(error){
-      console.log("error", error);
-    }
+  const request = await fetch('/all');
+  try{
+    const allData = await request.json();
+    document.getElementById('date').innerHTML = allData[0].date;
+    document.getElementById('temp').innerHTML = allData[0].temp;
+    document.getElementById('content').innerHTML = allData[0].content;
+
+  }catch(error){
+    console.log("error", error);
   }
+}
 
 // Create a new date instance dynamically with JS
 let d = new Date();

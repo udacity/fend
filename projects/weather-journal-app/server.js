@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+// projectData = {};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -20,7 +20,6 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-
 // Setup Server
 const port = 8000;
 
@@ -29,52 +28,38 @@ const server = app.listen(port, listening);
 // const server = app.listen(port, () => { console.log(`running on localhost: ${port}`) })
 // Callback to debug
 function listening() {
-    console.log("server running");
-    console.log(`running on localhost: ${port}`)
+  console.log("server running");
+  console.log(`running on localhost: ${port}`)
 };
-
-// Create JS object
-const fakeData = {
-    animal: 'Lion',
-    fact: 'Lions are fun'
-    // userResponse: 'TestData'
-}
 
 // GET route
-app.get('/fakeAnimalData', getFakeData)
+app.get('/projectData', getProjectData)
 
-function getFakeData (req, res) {
-  res.send(fakeData);
+function getProjectData (req, res) {
+  res.send(projectData);
 };
 
-const animalData = [];
+const projectData = [];
 
 app.get('/all', getData)
 
 function getData(req, res){
-    res.send(animalData)
-    console.log(animalData)
+    res.send(projectData)
+    console.log(projectData)
 }
 
 // POST route
-app.post('/addAnimal', addAnimal);
+app.post('/addWeather', addWeather);
 
-function addAnimal(req,res){
+function addWeather(req,res){
 console.log(req.body)
   newEntry = {
-    animal: req.body.animal,
-    facts: req.body.fact,
-    fav: req.body.fav
+    date: req.body.date,
+    temp: req.body.temp,
+    content: req.body.content
   }
 
-  animalData.push(newEntry)
-  res.send(animalData)
-  console.log(animalData)
+  projectData.push(newEntry)
+  res.send(projectData)
+  console.log(projectData)
 }
-
-
-// app.post('/date', addDate);
-
-// function addDate (req,res){
-//     data.push(req.body);
-// };
