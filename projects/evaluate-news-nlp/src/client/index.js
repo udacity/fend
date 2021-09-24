@@ -1,4 +1,4 @@
-import { checkForName } from "./js/nameChecker";
+import { getLanguageData } from "./js/getLanguageData";
 import { handleSubmit } from "./js/formHandler";
 import { onBlur } from "./js/onBlur";
 
@@ -8,4 +8,4 @@ import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
 
-export { checkForName, handleSubmit, onBlur };
+export { getLanguageData, handleSubmit, onBlur };
