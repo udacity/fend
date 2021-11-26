@@ -10,6 +10,10 @@
 
 
 /* ---- Base Rules ---- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -189,6 +193,28 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
+/* style the move to top button */
+#moveToTop {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+    background-color: white;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.3);
+  }  
+  #moveToTop:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+  }
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
