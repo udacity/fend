@@ -28,3 +28,15 @@ app.listen(port, listening);
 function listening() {
   console.log('server is up and running on port: ' + port);
 }
+
+// GET route
+app.get('/', (req, res) => {
+  res.send(projectData);
+})
+
+// POST route
+app.post('/', (req, res) => {
+  projectData[temperature] = req.body.temperature;
+  projectData[date] = req.body.date;
+  projectData[userResponse] = req.body.userResponse;
+})
