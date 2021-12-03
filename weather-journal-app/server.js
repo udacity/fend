@@ -23,20 +23,30 @@ app.use(express.static('website'));
 
 // Setup Server
 const port = 8000
-app.listen(port, listening);
+const server = app.listen(port, listening);
 
 function listening() {
   console.log('server is up and running on port: ' + port);
 }
 
 // GET route
-app.get('/', (req, res) => {
+app.get('/all', (req, res) => {
   res.send(projectData);
 })
 
 // POST route
-app.post('/', (req, res) => {
-  projectData[temperature] = req.body.temperature;
-  projectData[date] = req.body.date;
-  projectData[userResponse] = req.body.userResponse;
+app.post('/add', (req, res) => {
+  console.log('posting')
+  // console.log('req', req);
+  const newData = {
+    temp: req.body.temp,
+    date: req.body.date,
+    content: req.body.content
+  }
+  console.log('req.body' , req.body)
+  projectData = newData;
+  // projectData['userResponse'] = req.body.userResponse;
+  console.log(projectData);
+  // res.sendStatus(200);
+  res.send(projectData);
 })
