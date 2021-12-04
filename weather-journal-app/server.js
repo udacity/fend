@@ -36,17 +36,12 @@ app.get('/all', (req, res) => {
 
 // POST route
 app.post('/add', (req, res) => {
-  console.log('posting')
-  // console.log('req', req);
   const newData = {
+    name: req.body.name,
     temp: req.body.temp,
     date: req.body.date,
     content: req.body.content
   }
-  console.log('req.body' , req.body)
   projectData = newData;
-  // projectData['userResponse'] = req.body.userResponse;
-  console.log(projectData);
-  // res.sendStatus(200);
   res.send(projectData);
 })

@@ -7,6 +7,7 @@ const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
+// get request
 const getData = async (url='') => {
   const request = await fetch(url);
   try{
@@ -17,6 +18,7 @@ const getData = async (url='') => {
   }
 };
 
+// add click event
 const generate = document.getElementById('generate');
 generate.addEventListener('click', callback);
 
@@ -25,11 +27,12 @@ function callback() {
   const userResponse = document.getElementById('feelings').value;
   getData(baseUrl+zip+'&appid='+key)
   .then((data) => {
-    postData('/add', {temp: data.main.temp, date: newDate, content: userResponse});
+    postData('/add', {name: data.name, temp: data.main.temp, date: newDate, content: userResponse});
   })
   .then(() => updateUI())
 }
 
+// post request
 const postData = async (url = '', data = {}) => {
   const params = {
     method: 'POST',
@@ -52,15 +55,18 @@ const postData = async (url = '', data = {}) => {
   }
 }
 
-const updateUI =  () => {
+// update UI with the new data
+const updateUI = () => {
+  const name = document.getElementById('name');
   const date = document.getElementById('date');
   const temp = document.getElementById('temp');
   const content = document.getElementById('content');
   getData('/all')
   .then((data) => {
-    date.textContent = data.date;
-    temp.textContent = data.temp;
-    content.textContent = data.content;
+    name.textContent = 'Name: '+ data.name;
+    date.textContent = 'Date: '+ data.date;
+    temp.textContent = 'Temperature: ' + data.temp;
+    content.textContent = 'Content: ' + data.content;
   })
 
 }
