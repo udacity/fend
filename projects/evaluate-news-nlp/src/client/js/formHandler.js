@@ -7,12 +7,28 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
 
-    //fetch API here
-    fetch('http://localhost:8081/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
+    const formdata = new FormData();
+    formdata.append("key", '0c9040692016fe7f516447bcb1c49fad');
+    formdata.append("txt", formText);
+    formdata.append("lang", 'en');  // 2-letter code, like en es fr ...
+
+    const requestOptions = {
+    method: 'POST',
+    body: formdata,
+    redirect: 'follow'
+    };
+
+    fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
+    .then(res => ({
+        status: res.status,
+        body: res.json(),
+    }))
+    .then(({ status, body }) => {
+        console.log(status, body);
+        document.getElementById('results').innerHTML = body.main.agreement
     })
+    .catch(error => console.log('error', error));
+
 }
 
 export { handleSubmit }
