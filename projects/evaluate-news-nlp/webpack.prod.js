@@ -6,6 +6,10 @@ const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 module.exports= {
     //set up the entry point
     entry: './src/client/index.js',
@@ -13,6 +17,9 @@ module.exports= {
     //mode- set environment
     mode:'production',
 
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
 
     //Loader: if the Es6 code we write can't be read by client browser, it will automatically translate for us
     //for all .js files(except node_modules folder), apply babel loader
@@ -25,8 +32,8 @@ module.exports= {
             },
             {
                 test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+                }
         ]
     },
 
@@ -45,7 +52,8 @@ module.exports= {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-    })
+        }),
 
+        new MiniCssExtractPlugin({ filename: "[name].css" })
     ]
 }
