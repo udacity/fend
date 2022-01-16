@@ -23,9 +23,12 @@ function handleSubmit(event) {
         status: res.status,
         body: res.json(),
     }))
-    .then(({ status, body }) => {
+    .then((status, body) => {
         console.log(status, body);
-        document.getElementById('results').innerHTML = body.main.agreement
+        return body;
+    })
+    .then((body)=>  {
+        document.getElementById('results').innerHTML = body;
     })
     .catch(error => console.log('error', error));
 
