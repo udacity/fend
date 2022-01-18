@@ -10,6 +10,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
+WorkboxPlugin = require('workbox-webpack-plugin');
+
 module.exports= {
     //set up the entry point
     entry: './src/client/index.js',
@@ -54,6 +56,9 @@ module.exports= {
             protectWebpackAssets: false
         }),
 
-        new MiniCssExtractPlugin({ filename: "[name].css" })
+        new MiniCssExtractPlugin({ filename: "[name].css" }),
+
+        //service worker
+        new WorkboxPlugin.GenerateSW()
     ]
 }
