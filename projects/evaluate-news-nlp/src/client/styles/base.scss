@@ -1,11 +1,16 @@
 body {
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #ded0b7;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 main {
-    flex: 2;
+    flex: 2em;
+    margin: 2ex;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 section {

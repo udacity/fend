@@ -23,12 +23,18 @@ function handleSubmit(event) {
         status: res.status,
         body: res.json(),
     }))
-    .then((status, body) => {
-        console.log(status, body);
-        return body;
+    .then(({status, body}) => {
+        // console.log('Status:',status, 'Body:',body);
+        return {status, body}
     })
-    .then((body)=>  {
-        document.getElementById('results').innerHTML = body;
+    .then(data=>  {
+        return data['body']
+    })
+    .then( data =>{
+        document.getElementById('agreement').innerHTML = "Agreement/Disagreement: " + data.agreement;
+        document.getElementById('subjectivity').innerHTML ="Sybjectivity/Objective: " + data.subjectivity;
+        document.getElementById('confidence').innerHTML ="Confience(0-100): " + data.confidence;
+        document.getElementById('irony').innerHTML = "Ironic/Nonironic: "+ data.irony;
     })
     .catch(error => console.log('error', error));
 

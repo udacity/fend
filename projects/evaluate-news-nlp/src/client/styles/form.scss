@@ -1,12 +1,16 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+    border: 2px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fbcc5c;
+    height: 320px;
+    width: 100%;
 }
 
 input {
     padding: 5px 20px;
     width: 100%;
-    line-height: 16px;
+    line-height: 200px;
     margin: 10px 0;
+    font-family: "Lucida Console", "Courier New", monospace;
 }

@@ -1,5 +1,24 @@
-header {
+.title{
     display: flex;
+    margin-top: 10px;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 20px;
+    color: #ec9c46;
+    font-weight: 900;
+    font-size: 150%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+}
+
+header, .note{
+    padding: 20px;
+    color: #44924c;
+    font-size: 100%;
+    font-weight:700;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+}
+
+span{
+    font-weight: bolder;
 }
