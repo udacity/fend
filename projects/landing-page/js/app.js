@@ -26,6 +26,7 @@ const ul = document.querySelector('#navbar__list');
 const one = document.querySelector('#section1');
 const two = document.querySelector('#section2');
 const three = document.querySelector('#section3')
+const four = document.querySelector('#section4')
 
 /**
  * End Global Variables
@@ -33,67 +34,76 @@ const three = document.querySelector('#section3')
  * 
  */
 const link = function(text, id) {
+    let a = document.createElement('a');
     let li = document.createElement('li');
-    li.innerHTML = `<a> ${text} </a>`;
+    a.innerHTML = `${text.dataset.nav}`;
+    li.append(a)
     li.setAttribute('id', id)
     li.classList.add('menu__link');
     return li
 }
 const scrollY = function(start, old) {
-    if (window.scrollY >= start.getBoundingClientRect().top && window.scrollY >= start.getBoundingClientRect().bottom === 16) {
+    if (start.getBoundingClientRect().top <= 443) {
         start.classList.add('your-active-class');
         old.classList.remove('your-active-class');
     } else {
-        start.classList.add('your-active-class');
+        start.classList.remove('your-active-class');
     }
 }
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
- */
+const secLink = function(sec, num) {
+        sec.addEventListener('click', function() {
+            window.scrollTo({
+                // top: num.getBoundingClientRect().top,
+                top: num.offsetTop,
+                behavior: 'smooth'
+            })
+        })
+    }
+    /**
+     * End Helper Functions
+     * Begin Main Functions
+     * 
+     */
 
 
 // build the nav
-ul.appendChild(link('Section 1', 'sec1'));
-ul.appendChild(link('Section 2', 'sec2'));
-ul.appendChild(link('Section 3', 'sec3'));
-const sec1 = document.querySelector('#sec1');
-const sec2 = document.querySelector('#sec2')
-const sec3 = document.querySelector('#sec3')
+const menu = () => {
+    ul.appendChild(link(one, 'sec1'));
+    ul.appendChild(link(two, 'sec2'));
+    ul.appendChild(link(three, 'sec3'));
+    ul.appendChild(link(four, 'sec4'));
+    const sec1 = document.querySelector('#sec1');
+    const sec2 = document.querySelector('#sec2');
+    const sec3 = document.querySelector('#sec3');
+    const sec4 = document.querySelector('#sec4')
+}
 
 // Add class 'active' to section when near top of viewport
-// function scroll() {
-//     document.addEventListener('scroll', function() {
-//         scrollY(two, one)
-//         scrollY(three, two)
-//     })
-// }
-
-// Scroll to anchor ID using scrollTO event
-
-/**
- * End Main Functions
- * Begin Events
- * 
- */
-
-// Build menu 
-
-// Scroll to section on link click
-const mlink = function(sec, num) {
-    sec.addEventListener('click', function() {
-        window.scrollTo({
-            // top: num.getBoundingClientRect().top,
-            top: num.offsetTop,
-            behavior: 'smooth'
-        })
+const scroll = () => {
+    document.addEventListener('scroll', function() {
+        scrollY(one, four);
+        scrollY(two, one);
+        scrollY(three, two);
+        scrollY(four, three);
     })
 }
 
-mlink(sec1, one)
-mlink(sec2, two)
-mlink(sec3, three)
+// Scroll to anchor ID using scrollTO event
+const clickLink = () => {
+        secLink(sec1, one);
+        secLink(sec2, two);
+        secLink(sec3, three);
+        secLink(sec4, four);
+    }
+    /**
+     * End Main Functions
+     * Begin Events
+     * 
+     */
+
+// Build menu 
+menu()
+    // Scroll to section on link click
+clickLink()
     // Set sections as active
 scroll()
