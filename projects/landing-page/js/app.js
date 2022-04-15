@@ -33,23 +33,39 @@ const four = document.querySelector('#section4')
  * Start Helper Functions
  * 
  */
+
+/**
+ * @desc create a list for the nav-bar ul
+ * @param $text - The name of the section
+ * @param $id - Assign an id to the li
+ */
 const link = function(text, id) {
-    let a = document.createElement('a');
-    let li = document.createElement('li');
-    a.innerHTML = `${text.dataset.nav}`;
-    li.append(a)
-    li.setAttribute('id', id)
-    li.classList.add('menu__link');
-    return li
-}
-const scrollY = function(start, old) {
-    if (start.getBoundingClientRect().top <= 443) {
-        start.classList.add('your-active-class');
-        old.classList.remove('your-active-class');
-    } else {
-        start.classList.remove('your-active-class');
+        let a = document.createElement('a');
+        let li = document.createElement('li');
+        a.innerHTML = `${text.dataset.nav}`;
+        li.append(a)
+        li.setAttribute('id', id)
+        li.classList.add('menu__link');
+        return li
     }
-}
+    /**
+     * @desc Assign an active class to section as you scroll
+     * @param $start - The section visible in the viewport
+     * @param $old - The last section
+     */
+const scrollY = function(start, old) {
+        if (start.getBoundingClientRect().top <= 443) {
+            start.classList.add('your-active-class');
+            old.classList.remove('your-active-class');
+        } else {
+            start.classList.remove('your-active-class');
+        }
+    }
+    /**
+     * @desc Create a scrollTo link to each section
+     * @param $sec - The name of the section
+     * @param $num - The id of the li
+     */
 const secLink = function(sec, num) {
         sec.addEventListener('click', function() {
             window.scrollTo({
