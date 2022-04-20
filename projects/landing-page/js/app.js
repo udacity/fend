@@ -67,12 +67,14 @@ const scrollY = function(start, old) {
      * @param $num - The id of the li
      */
 const secLink = function(sec, num) {
-        sec.addEventListener('click', function() {
+        sec.addEventListener('click', function(e) {
+            e.preventDefault();
             window.scrollTo({
                 // top: num.getBoundingClientRect().top,
                 top: num.offsetTop,
                 behavior: 'smooth'
             })
+            sec.classList.add('menu__link');
         })
     }
     /**
