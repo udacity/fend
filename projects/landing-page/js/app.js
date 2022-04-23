@@ -23,10 +23,7 @@
  * 
  */
 const ul = document.querySelector('#navbar__list');
-const one = document.querySelector('#section1');
-const two = document.querySelector('#section2');
-const three = document.querySelector('#section3')
-const four = document.querySelector('#section4')
+const sections = Array.from(document.getElementsByTagName("section"));
 
 /**
  * End Global Variables
@@ -34,94 +31,101 @@ const four = document.querySelector('#section4')
  * 
  */
 
-/**
- * @desc create a list for the nav-bar ul
- * @param $text - The name of the section
- * @param $id - Assign an id to the li
- */
-const link = function(text, id) {
-        let a = document.createElement('a');
-        let li = document.createElement('li');
-        a.innerHTML = `${text.dataset.nav}`;
-        li.append(a)
-        li.setAttribute('id', id)
+const link = function() {
+    for (let section of sections) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        // use the section data-nav to fill the <a> tag
+        a.innerHTML = section.dataset.nav;
+        li.append(a);
         li.classList.add('menu__link');
-        return li
+        ul.appendChild(li);
     }
-    /**
-     * @desc Assign an active class to section as you scroll
-     * @param $start - The section visible in the viewport
-     * @param $old - The last section
-     */
-const scrollY = function(start, old) {
-        if (start.getBoundingClientRect().top <= 443) {
-            start.classList.add('your-active-class');
-            old.classList.remove('your-active-class');
-        } else {
-            start.classList.remove('your-active-class');
+}
+
+/**
+ * @desc Loop over an li in the document and remove it's active class
+ * @param $items - All the li in the document
+ */
+function removeSelected(items) {
+    for (var i = 0; i < items.length; i++) {
+        items[i].classList.remove('menu__link-active');
+    }
+}
+
+/**
+ * @desc Loop over the sections in the document and remove it's active class
+ * @param $items - All the sections in the document
+ */
+function removeSectionClass(items) {
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].className == 'your-active-class') {
+            items[i].classList.remove('your-active-class');
         }
     }
-    /**
-     * @desc Create a scrollTo link to each section
-     * @param $sec - The name of the section
-     * @param $num - The id of the li
-     */
-const secLink = function(sec, num) {
-        sec.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                // top: num.getBoundingClientRect().top,
-                top: num.offsetTop,
-                behavior: 'smooth'
-            })
-            sec.classList.add('menu__link');
-        })
-    }
-    /**
-     * End Helper Functions
-     * Begin Main Functions
-     * 
-     */
+}
 
 
-// build the nav
+
+/**
+ * End Helper Functions
+ * Begin Main Functions
+ * 
+ */
+
+
+// build the nav and add Scroll to anchor ID using scrollTO event
+link()
+const li = document.querySelectorAll('li')
 const menu = () => {
-    ul.appendChild(link(one, 'sec1'));
-    ul.appendChild(link(two, 'sec2'));
-    ul.appendChild(link(three, 'sec3'));
-    ul.appendChild(link(four, 'sec4'));
-    const sec1 = document.querySelector('#sec1');
-    const sec2 = document.querySelector('#sec2');
-    const sec3 = document.querySelector('#sec3');
-    const sec4 = document.querySelector('#sec4')
+
+    li.forEach((item) => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            removeSelected(li);
+            this.classList.add('menu__link-active');
+            for (let section of sections) {
+                if (item.innerText == section.dataset.nav) {
+                    window.scrollTo({
+                        // top: num.getBoundingClientRect().top,
+                        top: section.offsetTop,
+                        behavior: 'smooth'
+                    })
+                }
+            }
+        });
+    });
 }
 
 // Add class 'active' to section when near top of viewport
-const scroll = () => {
+const scrollY = function() {
     document.addEventListener('scroll', function() {
-        scrollY(one, four);
-        scrollY(two, one);
-        scrollY(three, two);
-        scrollY(four, three);
+        for (let section of sections) {
+            if (section.getBoundingClientRect().top <= 443) {
+                removeSectionClass(sections)
+                section.classList.add('your-active-class');
+
+                li.forEach((item) => {
+                    if (item.innerText == section.dataset.nav) {
+                        removeSelected(li);
+                        item.classList.add('menu__link-active');
+                    }
+                })
+
+            }
+        }
     })
 }
 
-// Scroll to anchor ID using scrollTO event
-const clickLink = () => {
-        secLink(sec1, one);
-        secLink(sec2, two);
-        secLink(sec3, three);
-        secLink(sec4, four);
-    }
-    /**
-     * End Main Functions
-     * Begin Events
-     * 
-     */
 
-// Build menu 
+
+/**
+ * End Main Functions
+ * Begin Events
+ * 
+ */
+
+// Build menu and Scroll to section on link click
 menu()
-    // Scroll to section on link click
-clickLink()
     // Set sections as active
-scroll()
+scrollY()
