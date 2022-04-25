@@ -48,7 +48,7 @@ const link = function() {
  * @param $items - All the li in the document
  */
 function removeSelected(items) {
-    for (var i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length; i++) {
         items[i].classList.remove('menu__link-active');
     }
 }
@@ -58,7 +58,7 @@ function removeSelected(items) {
  * @param $items - All the sections in the document
  */
 function removeSectionClass(items) {
-    for (var i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length; i++) {
         if (items[i].className == 'your-active-class') {
             items[i].classList.remove('your-active-class');
         }
