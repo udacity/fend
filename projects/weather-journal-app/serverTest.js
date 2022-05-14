@@ -1,5 +1,5 @@
 /* Empty JS object to act as endpoint for all routes */
-const projectData = [];
+projectData = {};
 
 /* Express to run server and routes */
 const express = require('express');
@@ -18,7 +18,7 @@ app.use(cors());
 /* Initialize the main project folder*/
 app.use(express.static('website'));
 
-const port = 3000;
+const port = 8000;
 /* Spin up the server*/
 const server = app.listen(port, listening);
 
@@ -27,32 +27,42 @@ function listening() {
     console.log(`running on localhost: ${port}`);
 };
 
-// GET route
-app.get('/all', sendData);
-
-function sendData(request, response) {
-    response.send(projectData);
-};
-
 // POST route
 app.post('/add', callBack);
 
 function callBack(req, res) {
     res.send('POST received');
-};
+}
 
 // POST an animal
+const data = [];
 
+// app.post('/animal', addAnimal);
+// app.post('/addMovie', addMovie)
+
+// function addMovie(req, res) {
+//     data.push(req.body);
+//     console.log(req.body)
+// }
 app.post('/addAnimal', addAnimal);
 
 function addAnimal(req, res) {
-    let newData = req.body;
-    let newEntry = {
-        temperature: newData.temperature,
-        date: newData.date,
-        userResponse: newData.userResponse
+
+    newEntry = {
+        temperature: req.body.animal,
+        date: req.body.fact,
+        reponse: req.body.fav
     }
-    projectData.push(newEntry)
-    res.send(projectData)
-    console.log(projectData)
+
+    data.push(newEntry)
+    console.log(data)
+}
+
+
+// GET route
+app.get('/all', sendData);
+
+function sendData(req, res) {
+    res.send(data);
+    console.log(data);
 };
