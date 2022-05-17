@@ -1,8 +1,7 @@
-// let url = 'http://api.animalinfo.org/data/?animal='
-const url = 'http://api.openweathermap.org/data/2.5/forecast/daily?id=';
+const url = 'https://api.openweathermap.org/data/2.5/weather?id=';
 const key = '&appid=cb2eeafd3fb2f4ce0b2db2232ed72f9b'
-
-// Async POST
+    // const id = 2172797
+    // Async POST
 const postData = async(url = '', data = {}) => {
     console.log(data);
     const response = await fetch(url, {
@@ -45,11 +44,9 @@ function performAction(e) {
         .then(function(data) {
             // Add data
             console.log(data);
-            postData('/addAnimal', { temp: 'data.temperature', date: 'data.date', Response: response });
+            postData('/addAnimal', { temperature: data.main.temp, date: data.dt, userResponse: response })
         })
-        .then(
-            updateUI()
-        )
+        .then(updateUI())
 }
 
 const updateUI = async() => {
@@ -57,10 +54,10 @@ const updateUI = async() => {
     try {
         const allData = await request.json();
         console.log(allData)
-        document.querySelector('#temp').innerHTML = allData[0].temp;
-        document.querySelector('#date').innerHTML = allData[0].date;
-        document.querySelector('#content').innerHTML = allData[0].Response;
-        return allData
+        document.getElementById('temp').innerHTML = Math.round(allData[0].temperature) + 'degrees';
+        document.getElementById('date').innerHTML = allData[0].date;
+        document.getElementById('content').innerHTML = allData[0].res
+
     } catch (error) {
         console.log("error", error);
     }

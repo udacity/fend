@@ -37,32 +37,23 @@ function callBack(req, res) {
 // POST an animal
 const data = [];
 
-// app.post('/animal', addAnimal);
-// app.post('/addMovie', addMovie)
-
-// function addMovie(req, res) {
-//     data.push(req.body);
-//     console.log(req.body)
-// }
-app.post('/addAnimal', addAnimal);
-
-function addAnimal(req, res) {
-
-    newEntry = {
-        temperature: req.body.animal,
-        date: req.body.fact,
-        reponse: req.body.fav
-    }
-
-    data.push(newEntry)
-    console.log(data)
-}
-
-
 // GET route
 app.get('/all', sendData);
 
 function sendData(req, res) {
     res.send(data);
-    console.log(data);
 };
+app.post('/addAnimal', addAnimal);
+
+function addAnimal(req, res) {
+    newData = req.body
+    newEntry = {
+        temperature: newData.temperature,
+        date: newData.date,
+        res: newData.userResponse
+    }
+
+    data.push(newEntry);
+    res.send(data);
+    console.log(data)
+}
