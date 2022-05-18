@@ -2,7 +2,7 @@
 const url = 'https://api.openweathermap.org/data/2.5/weather?id=';
 
 // Personal API Key for OpenWeatherMap API
-const apiKey = '&appid=cb2eeafd3fb2f4ce0b2db2232ed72f9b';
+const apiKey = '&appid=cb2eeafd3fb2f4ce0b2db2232ed72f9b&units=imperial';
 
 // Event listener to add function to existing HTML DOM element
 document.getElementById('generate').addEventListener('click', performAction);
@@ -14,8 +14,7 @@ function performAction(e) {
     getZip(url, zip, apiKey)
         .then(function(data) {
             // Add data
-            console.log(data);
-            postData('/addInfo', { temperature: data.main.temp, date: data.dt, feel: response });
+            postData('/addData', { temperature: data.main.temp, date: data.dt, feel: response })
         })
         .then(updateUI())
 };
@@ -33,7 +32,6 @@ const getZip = async(url, zip, key) => {
     }
     /* Function to POST data */
 const postData = async(url = '', data = {}) => {
-    console.log(data);
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
@@ -58,10 +56,9 @@ const updateUI = async() => {
     const request = await fetch('/all');
     try {
         const allData = await request.json();
-        document.getElementById('temp').innerHTML = Math.round(allData[0].temperature) + 'degrees';
-        document.getElementById('date').innerHTML = allData[0].date;
-        document.getElementById('content').innerHTML = allData[0].res
-
+        document.getElementById('temp').innerHTML = Math.round(allData.temperature) + 'degrees';
+        document.getElementById('date').innerHTML = allData.date;
+        document.getElementById('content').innerHTML = allData.res;
     } catch (error) {
         console.log("error", error);
     }

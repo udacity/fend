@@ -30,27 +30,21 @@ function listening() {
     console.log(`running on localhost: ${port}`);
 };
 
-
-// Data array to store and retrieve data data
-const data = []
-    // Callback function to complete GET '/all'
+// Callback function to complete GET '/all'
 app.get('/all', sendData);
 
 function sendData(req, res) {
-    res.send(data);
+    res.send(projectData);
+    console.log(projectData)
 };
 // Post Route
-app.post('/addInfo', addInfo);
+app.post('/addData', addData);
 
-function addInfo(req, res) {
+function addData(req, res) {
     newData = req.body;
-    newEntry = {
-        temperature: newData.temperature,
-        date: newData.date,
-        res: newData.feel
-    };
-
-    data.push(newEntry);
-    // res.send(data);
-    console.log(data);
+    projectData['temperature'] = newData.temperature;
+    projectData['date'] = newData.date;
+    projectData['res'] = newData.feel;
+    res.send(projectData);
+    console.log('This is your data retrieved' + projectData);
 }
