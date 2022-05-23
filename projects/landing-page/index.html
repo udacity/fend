@@ -10,16 +10,21 @@
   <link href="css/styles.css" rel="stylesheet">
   <script src="js/app.js"> </script>
 </head>
-<body>
+
   <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
+    <header class="page__header">
     <nav class="navbar_menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar_list"></ul>
+      <ul id="navbar_list">
+        <li id="section1">Section 1</li>
+        <li id="section2">Section 2</li>
+        <li id="section3">Section 3</li>
+      </ul>
     </nav>
   </header>
-  <main>
+  
+    <main>
     <header class="main__hero">
       <h1>Landing Page </h1>
     </header>
@@ -52,9 +57,10 @@
       </div>
     </section>
   </main>
-  <footer class="page__footer">
+  
+    <footer class="page__footer">
     <p>&copy Udacity</p>
   </footer>
 
-</body>
+  </body>
 </html>
