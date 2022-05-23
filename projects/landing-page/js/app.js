@@ -22,7 +22,12 @@
  * Define Global Variables
  * 
 */
-
+const sections = document.querySelectorAll('section');
+const main = document.querySelector('main');
+const navBar = document.getElementById("navbar_list");
+const header = document.querySelector(".page__header");
+const scrollTop = document.querySelector(".scroll-top");
+const fragment = document.createDocumentFragment();
 
 /**
  * End Global Variables
@@ -39,7 +44,6 @@
 */
 
 // build the nav
-
 
 // Add class 'active' to section when near top of viewport
 
@@ -58,5 +62,3 @@
 // Scroll to section on link click
 
 // Set sections as active
-
-
