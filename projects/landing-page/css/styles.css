@@ -92,7 +92,7 @@ section {
     display: inline-block;
 }
 
-.navbar__menu .menu__link {
+.navbar_menu .menu__link {
     display: block;
     padding: 1em;
     font-weight: bold;
@@ -107,7 +107,7 @@ section {
 }
 
 /* Header Styles */
-.page__header {
+.page_header {
     background: #fff;
     position: fixed;
     top: 0;
