@@ -7,8 +7,26 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-
-
+.navbar_menu {
+  color: green;
+}
+#navbar_list {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar_menu li {
+  display: inline-flex;
+  align-items: center;
+  cursor: context-menu;
+  padding:0 5%;
+}
+li:hover {
+    background: #000;
+    color: #fff;
+    transition: ease 0.3s all;
+}
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
@@ -74,7 +92,7 @@ section {
     display: inline-block;
 }
 
-.navbar__menu .menu__link {
+.navbar_menu .menu__link {
     display: block;
     padding: 1em;
     font-weight: bold;
@@ -89,7 +107,7 @@ section {
 }
 
 /* Header Styles */
-.page__header {
+.page_header {
     background: #fff;
     position: fixed;
     top: 0;

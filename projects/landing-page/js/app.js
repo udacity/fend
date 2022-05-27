@@ -1,3 +1,4 @@
+
 /**
  * 
  * Manipulating the DOM exercise.
@@ -22,7 +23,12 @@
  * Define Global Variables
  * 
 */
-
+const sections = document.querySelectorAll('section');
+const main = document.querySelector('main');
+const navBar = document.getElementById("navbar_list");
+const header = document.querySelector(".page_header");
+const topScroll = document.querySelector(".top-Scroll");
+const fragment = document.createDocumentFragment();
 
 /**
  * End Global Variables
@@ -39,12 +45,48 @@
 */
 
 // build the nav
+for (let i=0; i < sections.length; i++) {
+  const liElement = document.createElement('li');
 
+  liElement.innerText = sections[i].dataset.nav;
+  liElement.href= sections[i].id;
+  liElement.dataset.id = sections[i].id;
+
+  fragment.appendChild(liElement);
+}
+navBar.appendChild(fragment);
 
 // Add class 'active' to section when near top of viewport
+function changeActive(actions) {
+  for(const active of actions) {
+    let navEl = document.querySelector('[data-id="'+ active.target.id+'"]');
 
+    if(active.isIntersecting == true) {
+      active.target.classList.add('your-active-class');
+      navEl.classList.add('your-active-class');
+    } else {
+      active.target.classList.remove('your-active-class');
+      navEl.classList.remove('your-active-class');
+    }
+  }
+}
+
+
+const observer = new IntersectionObserver(changeActive,{threshold:0.5});
+
+for(const section of sections) {
+  observer.observe(section);
+}
 
 // Scroll to anchor ID using scrollTO event
+navBar.addEventListener('click',function(evnt) {
+
+  evnt.preventDefault();
+  console.log(evnt.target.href);
+  let selected = document.getElementById(evnt.target.href);
+  selected.scrollIntoView({behavior:"smooth"});
+  // });
+});
 
 
 /**
@@ -53,10 +95,17 @@
  * 
 */
 
+// Scroll to top
+topScroll.addEventListener('click', function(){
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior:'smooth'
+  });
+});
+
 // Build menu 
 
 // Scroll to section on link click
 
 // Set sections as active
-
-
