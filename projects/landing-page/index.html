@@ -1,59 +1,73 @@
-<!DOCTYPE >
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
-    </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+<DOCTYPE! html>
+    <html>
+        <head>
+            <title>your Muscle Delievery</title>
+            <link rel="stylesheet" href="css.css">
+        </head>
+        <body>
+            <div class="div"id="navdiv">
+                <ul class="ulclass"id="navid">
+                    <li class="navList" id="nav1"><a href="#section1Heading">muscles names</a></li>
+                    <li class="navList" id="nav2"><a href="#section2Heading">Gym life style</a>  </li>
+                    <li class="navList" id="nav3"><a href="#section3Heading">machine names </a>  </li>
+                    <li class="navList" id="nav4"><a href="#section4Heading">excersises    </a>  </li>
+                
+                </ul>
+            </div>
+            <!--page header-->
+            <h1 class="pageTitle"><em><b> We Go JYM ;)</b></em></h1>
+            <!--images-->
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <div class=" div" id="imgdiv">
+            <img class="gymimg"id="firstimg"src="wallpaperflare.com_wallpaper (19).jpg">
+            <img class="gymimg"id="secondimg"src="wallpaperflare.com_wallpaper (20).jpg">
+            <!--this is the first section of the page--> 
+        </div>
+          <section class="  section" id="section1">
+            <h1 id="section1Heading"class="sectionsheaders">Muscles Names:</h1>
+           <ul class="ulclass" id="musclesList">
+            
+            
+            
+            <li class="muscleli" id="1stMuscle">Biceps</li>
+            <li class="muscleli" id="2ndMuscle">Triceps</li>
+            <li class="muscleli" id="3rdMuscle">chest</li>
+            <li class="muscleli" id="4thMuscle">back</li>
+            <li class="muscleli" id="5thMuscle">shoulder</li>
+            <li class="muscleli" id="6thMuscle">legs</li>
+            <li class="muscleli" id="7thMuscle">ABS</li>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+           </ul>
+            </section>
+            <section class="section" id="section2">
+          <h1 id="section2Heading"class="sectionsheaders">GYM Life style:</h1>
+                <p class="contentParagraph" id="lifeStyle">when you go gym you change your whole life style as gaining muscles doesn't only depend on training , but depend on your whole life,
+                    When you are training you have to sleep well to give your
+                    muscles time to recover as this is the time in which your muscles are build again
+                    also you need to eat well and get your need from protein(1.5to2 * your mass in kg)and calories.</p>
+        </section>
+            <section class="section" id="section3">
+          <h1 id="section3Heading"class="sectionsheaders">Machine Names:</h1>
+          <p>There are alot of famouse machines some of these are:</p>      
+          <ul class="ulclass" id="machineUL">
+                    <li class="machineli" id="1stmachine">Lat Pull Down machine</li>
+                    <li class="machineli" id="2ndmachine">Leg Extension</li>
+                    <li class="machineli" id="3rdmachine">Smith</li>   
+                    <li class="machineli" id="4thmachine">Treadmill</li> 
+                    <li class="machineli" id="5thmachine">Chest press machine</li>
+                </ul>
+          </section>
+            <section class="section" id="section4">
+                <h1 id="section4Heading"class="sectionsheaders">Excersises</h1>
+                <ul class="ulclass" id="exercisesUL">
+                   <li class="excercisesli" id="1stexcersis">Flat Dumbel chest press</li>
+                   <li class="excercisesli" id="2ndexcersis">Barbell row</li>
+                   <li class="excercisesli" id="3rdexcersis">pull up</li>
+                   <li class="excercisesli" id="4thexcersis">lat pull down</li>
+                   <li class="excercisesli" id="5thexcersis">Squad</li>  
+                </ul>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
-
-</body>
-</html>
+            </section>
+        <script src="js.js"></script>
+        </body>
+    </html>
