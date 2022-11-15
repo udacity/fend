@@ -9,6 +9,7 @@ import './styles/header.scss'
 
 console.log(checkForName);
 
+
 export {
     checkForName,
     handleSubmit
