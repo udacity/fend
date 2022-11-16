@@ -1,12 +1,12 @@
+
+
 const dotenv = require('dotenv');
 dotenv.config();
 
 
 
 const apiKey = process.env.API_KEY;
-
-
-
+const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
 
 
 
@@ -45,6 +45,50 @@ app.listen(8081, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+
+
+let data = []
+app.post('/data', function(req,res) {
+    data.push(req.body);
+    console.log(data);
+})
+
+app.get('/data', function(req,res) {
+    res.send(data);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
