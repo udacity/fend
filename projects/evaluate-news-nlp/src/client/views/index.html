@@ -31,13 +31,29 @@
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <div class="text">Agreement:</div><div id="agreement"></div>
+                    <div class="text">Subjectivity:</div><div id="subjectivity"></div>
+                    <div class="text">Irony:</div><div id="irony"></div>
+                    <div class="text">Model:</div><div id="model"></div>
+                    <div class="text">Score Tag:</div><div id="score-tag"></div>
+                    <div class="text">Confidence:</div><div id="confidence"></div>
+                </div>
+                
             </section>
         </main>
 
         <footer>
             <p>This is a footer</p>
         </footer>
-
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
     </body>
 </html>

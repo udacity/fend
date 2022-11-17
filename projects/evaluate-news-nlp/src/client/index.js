@@ -1,6 +1,7 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
-import { submit } from './js/onClick'
+import {textInput} from './js/formHandler'
+import {updateUI} from './js/formHandler'
 
 
 import './styles/resets.scss'
@@ -15,6 +16,7 @@ console.log(checkForName);
 export {
     checkForName,
     handleSubmit,
-    submit,
+    textInput,
+    updateUI
     
 }
