@@ -1,57 +1,20 @@
-//let innerText = document.getElementById('name').innerText;
-
 function handleSubmit(event) {
     event.preventDefault()
+     // Grabs value/input of what user enters
     let formText = document.getElementById('name').value 
-    // check what text was put into the form field
-
-    //Gets the value of what is entered in the text box
+   
     Client.checkForName(formText)
 
-   
-   /*console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    }) */
-
-   
-    
-    
-    /* .then(function(data) {
-        console.log(data);
-        postData('/add', {wind:data.wind});
-        updateUI();
-    })*/
-    
-    
-
     Client.textInput('http://localhost:8081/data', {formText})
-    //.then(() =>
-   // Client.updateUI()
-   // )
-
+   
+    // Waits to update UI with fetched data until data is sent
    setTimeout(function() {
-    updateUI();
+    updateUI(formText);
    }, 6000);
-    
-   /*fetch('http://localhost:8081/all')
-    .then(res=> res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.agreement
-    })*/ 
-   
-   
+ 
 }
 
-
-
-
-
-
-
-
+// Sends textInput to server side
 const textInput = async(url='', data={}) => {
     console.log(data);
     const response = fetch(url, {
@@ -67,13 +30,9 @@ const textInput = async(url='', data={}) => {
 } 
 
 
-const updateUI = async() => {
-    
-    const request = await fetch('http://localhost:8081/all');
-    
-    
-    console.log(request);
-    
+// Async function to update UI with data
+const updateUI = async(formText) => {
+    const request = await fetch('http://localhost:8081/' + formText);
         try {
             const allData = await request.json();
             console.log(allData);
@@ -88,15 +47,7 @@ const updateUI = async() => {
             console.log('error', error);
         }
     
-    
-    
-
-    
-    
 }
-
-
-
 
 
 
