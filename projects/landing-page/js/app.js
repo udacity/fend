@@ -22,15 +22,62 @@
  * Define Global Variables
  * 
 */
+const sections = document.querySelectorAll("section")
+const list = document.getElementById("navbar__list")
+const fragment = document.createDocumentFragment()
 
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
+function buildNavigationbar() {
+    for (const section of sections) {
+        const title = section.getAttribute("data-nav") //data set nav
+        const sectionId = section.getAttribute("id")
+        const listItem = document.createElement("li")
+        const link = document.createElement("a")
+
+        link.classList.add("menu__link")
+        link.href = `#${sectionId}`
+        link.textContent = title
+        //scroll smoothness
+        link.addEventListener("click", e =>{
+            e.preventDefault()
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"      //
+
+            })
+        })
+        listItem.appendChild(link)
+        fragment.appendChild(listItem)
+
+    }
+    list.appendChild(fragment)
 
 
+}
+window.addEventListener("load",buildNavigationbar)
+// Add class 'active' to section when near top of viewport
+const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0 //0.65
+
+}
+const links = document.querySelectorAll('a.menu__link')
+const observerCallback = (entries) =>{
+    if(entries[0].isIntersecting){
+        entries[0].target.classList.add("your-active-calss")
+        console.log(links)
+        links.forEach(link =>{
+            if(link.textContent === entries[0].target.dataset.nav ){
+                link.classList.add('active')
+
+            }else{
+                link.classList.remove('active')
+
+            }
+        })
+    }
+}
 
 /**
  * End Helper Functions
@@ -41,10 +88,17 @@
 // build the nav
 
 
-// Add class 'active' to section when near top of viewport
 
 
 // Scroll to anchor ID using scrollTO event
+//const observer = new IntersectionObserver(observerCallback, observerOptions)
+//window.addEventListener("scroll", ()=>{
+  //  for (const section of sections){
+    //    observer.observe(section)
+
+    //}
+//})
+
 
 
 /**
@@ -58,5 +112,3 @@
 // Scroll to section on link click
 
 // Set sections as active
-
-
